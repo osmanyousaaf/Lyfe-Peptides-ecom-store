@@ -1,0 +1,2093 @@
+[
+  {
+    "id": 709,
+    "name": "GHK-Cu 100 mg",
+    "slug": "ghk-cu-100-mg",
+    "category": "Anti-Aging",
+    "categories": [
+      "Anti-Aging"
+    ],
+    "tags": [
+      "Anti-Aging & Skin"
+    ],
+    "image": "/products/lyfe-ghk-cu-100mg.png",
+    "images": [
+      "/products/lyfe-ghk-cu-100mg.png"
+    ],
+    "inStock": true,
+    "type": "variable",
+    "shortDescription": "<p>GHK-Cu, the copper-binding tripeptide, supplied at a high 100 mg load for regenerative and skin research. For research purposes only.</p>",
+    "description": "<p>GHK-Cu is a naturally occurring copper-binding tripeptide (glycyl-L-histidyl-L-lysine) whose circulating levels decline sharply with age — making it one of the most heavily studied molecules in skin, matrix and regenerative research. This high-concentration 100 mg presentation is intended for extended or higher-dose research protocols.</p><p><strong>Commonly explored in research for:</strong></p><ul><li>Collagen, elastin and glycosaminoglycan synthesis in skin-remodelling models</li><li>Wound-healing, dermal-repair and tissue-regeneration pathways</li><li>Antioxidant, metal-chelation and anti-inflammatory signalling</li><li>Hair-follicle research and gene-expression modulation</li></ul><p>Supplied as 100 mg lyophilized powder for reconstitution; also available loaded in the Lyfe pen.</p>",
+    "needsReview": false,
+    "attributes": [
+      {
+        "name": "package",
+        "options": [
+          "Single Vial",
+          "3x Vials",
+          "10x Vials"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": 710,
+        "priceCents": 8500,
+        "attrs": {
+          "package": "Single Vial"
+        },
+        "label": "package: Single Vial"
+      },
+      {
+        "id": 711,
+        "priceCents": 24000,
+        "attrs": {
+          "package": "3x Vials"
+        },
+        "label": "package: 3x Vials"
+      },
+      {
+        "id": 712,
+        "priceCents": 76500,
+        "attrs": {
+          "package": "10x Vials"
+        },
+        "label": "package: 10x Vials"
+      }
+    ],
+    "priceMin": 8500,
+    "priceMax": 76500,
+    "priceCents": 8500
+  },
+  {
+    "id": 705,
+    "name": "CJC-1295 + Ipamorelin 10 mg",
+    "slug": "cjc-1295-ipamorelin-10-mg",
+    "category": "Growth Factors",
+    "categories": [
+      "Growth Factors"
+    ],
+    "tags": [
+      "Muscle & Growth"
+    ],
+    "image": "/products/lyfe-cjc-1295-ipamorelin-10mg.png",
+    "images": [
+      "/products/lyfe-cjc-1295-ipamorelin-10mg.png"
+    ],
+    "inStock": true,
+    "type": "variable",
+    "shortDescription": "<p>A 10 mg blend of CJC-1295 (GHRH analog) and Ipamorelin (selective ghrelin-receptor agonist) for secretagogue research. For research purposes only.</p>",
+    "description": "<p>A blend of CJC-1295, a growth-hormone-releasing hormone (GHRH) analog, and Ipamorelin, a selective ghrelin-receptor agonist. The two act on complementary pathways and are among the most frequently paired compounds in growth-hormone secretagogue research.</p><p><strong>Commonly explored in research for:</strong></p><ul><li>Synergistic growth-hormone release from two distinct mechanisms</li><li>Pulsatile GH secretion and IGF-1 axis models</li><li>Ghrelin-receptor (GHS-R) and GHRH-receptor signalling</li><li>Body-composition and metabolic research models</li></ul><p>Supplied as 10 mg lyophilized powder for reconstitution; also available loaded in the Lyfe pen.</p>",
+    "needsReview": false,
+    "attributes": [
+      {
+        "name": "package",
+        "options": [
+          "Single Vial",
+          "3x Vials",
+          "10x Vials"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": 706,
+        "priceCents": 8000,
+        "attrs": {
+          "package": "Single Vial"
+        },
+        "label": "package: Single Vial"
+      },
+      {
+        "id": 707,
+        "priceCents": 23000,
+        "attrs": {
+          "package": "3x Vials"
+        },
+        "label": "package: 3x Vials"
+      },
+      {
+        "id": 708,
+        "priceCents": 72000,
+        "attrs": {
+          "package": "10x Vials"
+        },
+        "label": "package: 10x Vials"
+      }
+    ],
+    "priceMin": 8000,
+    "priceMax": 72000,
+    "priceCents": 8000
+  },
+  {
+    "id": 701,
+    "name": "Tesamorelin 10 mg",
+    "slug": "tesamorelin-10-mg",
+    "category": "Growth Factors",
+    "categories": [
+      "Growth Factors"
+    ],
+    "tags": [
+      "Muscle & Growth"
+    ],
+    "image": "/products/lyfe-tesamorelin-10mg.png",
+    "images": [
+      "/products/lyfe-tesamorelin-10mg.png"
+    ],
+    "inStock": true,
+    "type": "variable",
+    "shortDescription": "<p>Tesamorelin, a stabilized GHRH analog, supplied as 10 mg for GH-axis and fat-metabolism research. For research purposes only.</p>",
+    "description": "<p>Tesamorelin is a synthetic, stabilized analog of growth-hormone-releasing hormone (GHRH), notable in research for its pronounced effect on the GH axis and on visceral-fat metabolism.</p><p><strong>Commonly explored in research for:</strong></p><ul><li>The GH / IGF-1 axis and secretagogue signalling</li><li>Adipose-tissue metabolism and visceral-fat models</li><li>Lipid-metabolism research</li><li>Body-composition studies</li></ul><p>Supplied as 10 mg lyophilized powder for reconstitution; also available in the Lyfe pen.</p>",
+    "needsReview": false,
+    "attributes": [
+      {
+        "name": "package",
+        "options": [
+          "Single Vial",
+          "3x Vials",
+          "10x Vials"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": 702,
+        "priceCents": 10000,
+        "attrs": {
+          "package": "Single Vial"
+        },
+        "label": "package: Single Vial"
+      },
+      {
+        "id": 703,
+        "priceCents": 28500,
+        "attrs": {
+          "package": "3x Vials"
+        },
+        "label": "package: 3x Vials"
+      },
+      {
+        "id": 704,
+        "priceCents": 90000,
+        "attrs": {
+          "package": "10x Vials"
+        },
+        "label": "package: 10x Vials"
+      }
+    ],
+    "priceMin": 10000,
+    "priceMax": 90000,
+    "priceCents": 10000
+  },
+  {
+    "id": 697,
+    "name": "TB-500 + BPC-157 10 mg",
+    "slug": "tb-500-bpc-157-10-mg-2",
+    "category": "Recovery",
+    "categories": [
+      "Recovery"
+    ],
+    "tags": [
+      "Gut Health",
+      "Recovery"
+    ],
+    "image": "/products/lyfe-tb-500-bpc-157-10mg.png",
+    "images": [
+      "/products/lyfe-tb-500-bpc-157-10mg.png"
+    ],
+    "inStock": true,
+    "type": "variable",
+    "shortDescription": "<p>A 10 mg blend of TB-500 (Thymosin Beta-4 fragment) and BPC-157, two of the most-referenced recovery peptides. For research purposes only.</p>",
+    "description": "<p>A blend of TB-500 (a Thymosin Beta-4 fragment) and BPC-157 (Body Protection Compound), two of the most-referenced recovery peptides in the literature and frequently studied together for their complementary repair pathways.</p><p><strong>Commonly explored in research for:</strong></p><ul><li>Combined connective-tissue and muscle-repair models</li><li>Angiogenesis and blood-vessel formation</li><li>Tendon, ligament and gastrointestinal research</li><li>Inflammation and recovery pathways</li></ul><p>Supplied as 10 mg lyophilized powder for reconstitution; also available in the Lyfe pen.</p>",
+    "needsReview": false,
+    "attributes": [
+      {
+        "name": "package",
+        "options": [
+          "Single Vial",
+          "3x Vials",
+          "10x Vials"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": 698,
+        "priceCents": 9000,
+        "attrs": {
+          "package": "Single Vial"
+        },
+        "label": "package: Single Vial"
+      },
+      {
+        "id": 699,
+        "priceCents": 25500,
+        "attrs": {
+          "package": "3x Vials"
+        },
+        "label": "package: 3x Vials"
+      },
+      {
+        "id": 700,
+        "priceCents": 81000,
+        "attrs": {
+          "package": "10x Vials"
+        },
+        "label": "package: 10x Vials"
+      }
+    ],
+    "priceMin": 9000,
+    "priceMax": 81000,
+    "priceCents": 9000
+  },
+  {
+    "id": 696,
+    "name": "5AMINO1MQ 5 mg",
+    "slug": "5amino1mq-5-mg",
+    "category": "Weight Loss",
+    "categories": [
+      "Weight Loss"
+    ],
+    "tags": [
+      "Fat Loss"
+    ],
+    "image": "/products/lyfe-5amino1mq-5mg.png",
+    "images": [
+      "/products/lyfe-5amino1mq-5mg.png"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>5-Amino-1MQ, a small-molecule NNMT inhibitor studied in metabolic and fat-cell research, 5 mg. For research purposes only.</p>",
+    "description": "<p>5-Amino-1MQ (5-amino-1-methylquinolinium) is a small-molecule inhibitor of nicotinamide N-methyltransferase (NNMT), an enzyme highly expressed in adipose tissue. It has become a point of interest in metabolic research for its proposed influence on cellular NAD+ and methylation pools.</p><p><strong>Commonly explored in research for:</strong></p><ul><li>NNMT inhibition and adipocyte-metabolism models</li><li>Cellular NAD+ and SAM (methylation) pool regulation</li><li>Energy-expenditure and fat-storage research</li><li>Metabolic-rate and body-composition models</li></ul><p>Supplied as 5 mg lyophilized powder for reconstitution.</p>",
+    "needsReview": false,
+    "priceCents": 6000,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 695,
+    "name": "HGH 10 IU",
+    "slug": "hgh-10-iu",
+    "category": "Growth Factors",
+    "categories": [
+      "Growth Factors"
+    ],
+    "tags": [],
+    "image": "/products/lyfe-hgh-10iu.png",
+    "images": [
+      "/products/lyfe-hgh-10iu.png"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>Somatropin (recombinant human growth hormone), 10 IU, for GH / IGF-1 axis research. For research purposes only.</p>",
+    "description": "<p>HGH (somatropin) is recombinant human growth hormone, a 191-amino-acid polypeptide identical to the pituitary hormone. It is a cornerstone reference compound across growth, metabolism and body-composition research.</p><p><strong>Commonly explored in research for:</strong></p><ul><li>The GH / IGF-1 signalling axis</li><li>Protein synthesis, lipolysis and glucose-metabolism models</li><li>Tissue-growth, regeneration and recovery research</li><li>Body-composition and metabolic-rate studies</li></ul><p>Supplied as 10 IU lyophilized powder for reconstitution.</p>",
+    "needsReview": false,
+    "priceCents": 10000,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 694,
+    "name": "AOD-9604 10 mg",
+    "slug": "aod-9604-10-mg",
+    "category": "Weight Loss",
+    "categories": [
+      "Weight Loss"
+    ],
+    "tags": [
+      "Fat Loss"
+    ],
+    "image": "/products/lyfe-aod-9604-10mg.png",
+    "images": [
+      "/products/lyfe-aod-9604-10mg.png"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>AOD-9604, a modified fragment of the HGH 176-191 region studied for lipolysis, 10 mg. For research purposes only.</p>",
+    "description": "<p>AOD-9604 is a modified synthetic peptide based on the C-terminal 176-191 fragment of human growth hormone, engineered to isolate the fat-metabolism portion of the molecule without the broader growth-promoting activity.</p><p><strong>Commonly explored in research for:</strong></p><ul><li>Lipolysis and fat-oxidation pathways</li><li>Adipose-tissue metabolism without GH / IGF-1 elevation</li><li>Energy-metabolism and body-composition models</li><li>Metabolic-regulation research</li></ul><p>Supplied as 10 mg lyophilized powder for reconstitution.</p>",
+    "needsReview": false,
+    "priceCents": 9500,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 693,
+    "name": "Slupp-332 5 mg",
+    "slug": "slupp-332-5-mg",
+    "category": "Weight Loss",
+    "categories": [
+      "Weight Loss"
+    ],
+    "tags": [
+      "Fat Loss"
+    ],
+    "image": "/products/lyfe-slupp-332-5mg.png",
+    "images": [
+      "/products/lyfe-slupp-332-5mg.png"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>SLU-PP-332, a research ERR (estrogen-related receptor) agonist studied in exercise-mimetic and metabolic models, 5 mg. For research purposes only.</p>",
+    "description": "<p>SLU-PP-332 is an investigational small-molecule agonist of the estrogen-related receptors (ERRα/β/γ), a family of orphan nuclear receptors that help regulate mitochondrial and oxidative metabolism. It is studied in the emerging “exercise-mimetic” class of metabolic research compounds.</p><p><strong>Commonly explored in research for:</strong></p><ul><li>ERR-pathway activation and mitochondrial-biogenesis models</li><li>Oxidative and endurance-metabolism research</li><li>Energy-expenditure and fat-utilization studies</li><li>Exercise-mimetic and metabolic-regulation models</li></ul><p>Supplied as 5 mg lyophilized powder for reconstitution.</p>",
+    "needsReview": true,
+    "priceCents": 9400,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 692,
+    "name": "NAD+ 500 mg",
+    "slug": "nad-500-mg",
+    "category": "Anti-Aging",
+    "categories": [
+      "Anti-Aging"
+    ],
+    "tags": [
+      "Anti-Aging & Skin"
+    ],
+    "image": "/products/lyfe-nad-500mg.png",
+    "images": [
+      "/products/lyfe-nad-500mg.png"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>NAD+ (nicotinamide adenine dinucleotide), the central metabolic coenzyme, supplied at 500 mg for cellular-energy and longevity research. For research purposes only.</p>",
+    "description": "<p>NAD+ (nicotinamide adenine dinucleotide) is an essential coenzyme present in every living cell, central to energy production and to the activity of sirtuins and PARP enzymes. Cellular NAD+ declines with age, making it one of the most actively studied molecules in longevity and metabolic research. This high-capacity 500 mg presentation suits extended research protocols.</p><p><strong>Commonly explored in research for:</strong></p><ul><li>Mitochondrial energy production and cellular-metabolism models</li><li>Sirtuin and PARP enzyme-activity research</li><li>DNA-repair and cellular-stress pathways</li><li>Aging, senescence and longevity models</li></ul><p>Supplied as 500 mg lyophilized powder for reconstitution; also available in the Lyfe pen.</p>",
+    "needsReview": false,
+    "priceCents": 7500,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 662,
+    "name": "Syringe 1ml 31G x 6mm (10 Pack)",
+    "slug": "syringe-1ml-31g-x-6mm-10-pack",
+    "category": "Accessories",
+    "categories": [
+      "Accessories"
+    ],
+    "tags": [],
+    "image": "/products/syringe-1ml.jpg",
+    "images": [
+      "/products/syringe-1ml.jpg"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>1 mL (U-100) syringe with a fixed 31G x 6mm needle, pack of 10.</p>",
+    "description": "<p>1 mL (U-100) syringe with a fixed 31G x 6mm needle, pack of 10. Clear barrel with unit graduations.</p>\n<p><strong>Use:</strong> For accurate measuring and dispensing of reconstituted research solutions. The U-100 unit markings allow precise volume selection when preparing and transferring samples in the laboratory.</p>\n<p><strong>For research and laboratory use.</strong></p>",
+    "needsReview": false,
+    "priceCents": 1100,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 660,
+    "name": "Pen Needles 6mm 32G (10 Pack)",
+    "slug": "pen-needles-6mm-32g",
+    "category": "Accessories",
+    "categories": [
+      "Accessories"
+    ],
+    "tags": [],
+    "image": "/products/needle-32g.jpg",
+    "images": [
+      "/products/needle-32g.jpg"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>Universal pen needles, 32G x 6mm, box of 10. Thin-wall ComfortFlow flat-base design; fits standard injection pens.</p>",
+    "description": "<p>Universal pen needles, 32G x 6mm, box of 10, featuring a thin-wall ComfortFlow flat-base design. Single-use, sterile and individually sealed.</p>\n<p><strong>Use:</strong> Compatible with standard injection-style pens for laboratory handling and dispensing of reconstituted research material. The finer 32G gauge and thin-wall bore suit more delicate, precise transfer work.</p>\n<p><strong>For research and laboratory use.</strong></p>",
+    "needsReview": false,
+    "priceCents": 250,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 658,
+    "name": "Pen Needles 6mm 31G (10 Pack)",
+    "slug": "pen-needles-6mm-31g",
+    "category": "Accessories",
+    "categories": [
+      "Accessories"
+    ],
+    "tags": [],
+    "image": "/products/needle-31g.jpg",
+    "images": [
+      "/products/needle-31g.jpg"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>Universal pen needles, 31G x 6mm (1/4&#8243;), box of 10. Fits standard injection pens.</p>",
+    "description": "<p>Universal pen needles, 31G x 6mm (1/4&#8243;), box of 10. Single-use, sterile and individually sealed.</p>\n<p><strong>Use:</strong> Compatible with standard injection-style pens for drawing, measuring and dispensing reconstituted research material in the laboratory. The 31G gauge is a versatile choice for general handling and transfer work.</p>\n<p><strong>For research and laboratory use.</strong></p>",
+    "needsReview": false,
+    "priceCents": 250,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 654,
+    "name": "HGH 176-191 (Fragment)",
+    "slug": "hgh-176-191-fragment",
+    "category": "Growth Factors",
+    "categories": [
+      "Growth Factors"
+    ],
+    "tags": [
+      "Fat Loss"
+    ],
+    "image": "/products/lyfe-pen-v2.png",
+    "images": [
+      "/products/lyfe-pen-v2.png"
+    ],
+    "inStock": false,
+    "type": "variable",
+    "shortDescription": "<p>HGH Fragment 176-191, the C-terminal fragment of growth hormone studied in lipid-metabolism research. For research purposes only.</p>",
+    "description": "<p>HGH Fragment 176-191 is a modified C-terminal fragment of human growth hormone. It is studied for the fat-metabolism activity of GH without the full molecule effects on growth or blood sugar.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Lipolysis – the breakdown of stored fat</li>\n<li>Adipose-tissue and fat-metabolism models</li>\n<li>Selectivity research (activity without IGF-1 or glucose impact)</li>\n<li>Body-composition research</li>\n</ul>\n<p>Available loaded in the Lyfe pen.</p>",
+    "needsReview": false,
+    "attributes": [
+      {
+        "name": "Package",
+        "options": [
+          "Single Pen",
+          "3x Pens",
+          "10x Pens"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": 655,
+        "priceCents": 10000,
+        "attrs": {
+          "Package": "Single Pen"
+        },
+        "label": "Package: Single Pen"
+      },
+      {
+        "id": 656,
+        "priceCents": 28500,
+        "attrs": {
+          "Package": "3x Pens"
+        },
+        "label": "Package: 3x Pens"
+      },
+      {
+        "id": 657,
+        "priceCents": 90000,
+        "attrs": {
+          "Package": "10x Pens"
+        },
+        "label": "Package: 10x Pens"
+      }
+    ],
+    "priceMin": 10000,
+    "priceMax": 90000,
+    "priceCents": 10000
+  },
+  {
+    "id": 405,
+    "name": "GHK-Cu + KPV 60 mg",
+    "slug": "ghk-cu-kpv-50-mg",
+    "category": "Anti-Aging",
+    "categories": [
+      "Anti-Aging"
+    ],
+    "tags": [
+      "Gut Health"
+    ],
+    "image": "/products/lyfe-pen-purple.jpg",
+    "images": [
+      "/products/lyfe-pen-purple.jpg",
+      "/products/ghk-cu-kpv-50mg-1.png"
+    ],
+    "inStock": true,
+    "type": "variable",
+    "shortDescription": "<p>GHK-Cu and KPV copper-peptide blend, 60 mg. For research purposes only.</p>",
+    "description": "<p>A blend of the copper-binding tripeptide GHK-Cu and KPV, a tripeptide fragment of alpha-MSH. The combination pairs a skin-remodelling copper peptide with an anti-inflammatory peptide.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Collagen synthesis, skin remodelling and dermal repair</li>\n<li>Anti-inflammatory signalling via the melanocortin pathway</li>\n<li>Combined regenerative and cosmetic research models</li>\n<li>Wound-healing and tissue-quality studies</li>\n</ul>\n<p>Supplied as 60 mg lyophilized powder; also available in the Lyfe dual-chamber pen.</p>",
+    "needsReview": false,
+    "attributes": [
+      {
+        "name": "Package",
+        "options": [
+          "Single Pen",
+          "3x Pens",
+          "10x Pens",
+          "Single Vial",
+          "3x Vials",
+          "10x Vials"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": 575,
+        "priceCents": 9000,
+        "attrs": {
+          "Package": "Single Vial"
+        },
+        "label": "Package: Single Vial"
+      },
+      {
+        "id": 576,
+        "priceCents": 25500,
+        "attrs": {
+          "Package": "3x Vials"
+        },
+        "label": "Package: 3x Vials"
+      },
+      {
+        "id": 443,
+        "priceCents": 32999,
+        "attrs": {
+          "Package": "Single Pen"
+        },
+        "label": "Package: Single Pen"
+      },
+      {
+        "id": 577,
+        "priceCents": 80000,
+        "attrs": {
+          "Package": "10x Vials"
+        },
+        "label": "Package: 10x Vials"
+      },
+      {
+        "id": 444,
+        "priceCents": 96099,
+        "attrs": {
+          "Package": "3x Pens"
+        },
+        "label": "Package: 3x Pens"
+      },
+      {
+        "id": 445,
+        "priceCents": 310599,
+        "attrs": {
+          "Package": "10x Pens"
+        },
+        "label": "Package: 10x Pens"
+      }
+    ],
+    "priceMin": 9000,
+    "priceMax": 310599,
+    "priceCents": 9000
+  },
+  {
+    "id": 401,
+    "name": "Bacteriostatic Water 10 mL",
+    "slug": "bacteriostatic-water-30-ml",
+    "category": "Accessories",
+    "categories": [
+      "Accessories"
+    ],
+    "tags": [],
+    "image": "/products/bacwater_10ml.jpg",
+    "images": [
+      "/products/bacwater_10ml.jpg"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>Sterile bacteriostatic water (USP), 10 mL multidose vial for reconstituting lyophilized research peptides. For research purposes only.</p>",
+    "description": "<p>Sterile bacteriostatic water for injection (USP), 10 mL multidose vial, preserved with 0.9% benzyl alcohol. Latex-free.</p>\n<p><strong>Laboratory use:</strong> Used to reconstitute lyophilized (freeze-dried) research peptides into solution for handling and measurement. The benzyl-alcohol preservative allows the same vial to be accessed multiple times over a period of days while limiting microbial growth, making it the standard diluent for multi-use peptide research.</p>\n<p><strong>For research purposes only. Not for human use.</strong></p>",
+    "needsReview": false,
+    "priceCents": 800,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 138,
+    "name": "SS-31 10 mg",
+    "slug": "ss-31-10-mg",
+    "category": "Performance",
+    "categories": [
+      "Performance"
+    ],
+    "tags": [
+      "Energy & Endurance"
+    ],
+    "image": "/products/lyfe-ss-31.jpg",
+    "images": [
+      "/products/lyfe-ss-31.jpg"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>SS-31 (Elamipretide), a mitochondria-targeted tetrapeptide, 10 mg. For research purposes only.</p>",
+    "description": "<p>SS-31 (also known as Elamipretide) is a mitochondria-targeting tetrapeptide that concentrates in the inner mitochondrial membrane and binds cardiolipin.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Mitochondrial function and cardiolipin stabilization</li>\n<li>Reactive-oxygen-species and oxidative-stress research</li>\n<li>Cellular energy (ATP) production models</li>\n<li>Aging, ischemia and mitochondrial-dysfunction studies</li>\n</ul>\n<p>Supplied as 10 mg lyophilized powder for reconstitution.</p>",
+    "needsReview": false,
+    "priceCents": 7500,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 137,
+    "name": "LL-37 5 mg",
+    "slug": "ll-37-5-mg",
+    "category": "Recovery",
+    "categories": [
+      "Recovery"
+    ],
+    "tags": [
+      "Gut Health",
+      "Recovery"
+    ],
+    "image": "/products/lyfe-ll-37.jpg",
+    "images": [
+      "/products/lyfe-ll-37.jpg"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>LL-37, the human cathelicidin antimicrobial peptide, 5 mg. For research purposes only.</p>",
+    "description": "<p>LL-37 is the only human cathelicidin-derived antimicrobial peptide and a central molecule in innate-immunity research.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Antimicrobial activity against bacteria and biofilms</li>\n<li>Innate immune response and host defence</li>\n<li>Wound-healing and tissue-repair models</li>\n<li>Immunomodulation and inflammatory signalling</li>\n</ul>\n<p>Supplied as 5 mg lyophilized powder for reconstitution.</p>",
+    "needsReview": false,
+    "priceCents": 6000,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 104,
+    "name": "GLP2TR",
+    "slug": "glp2tr",
+    "category": "Weight Loss",
+    "categories": [
+      "Weight Loss"
+    ],
+    "tags": [
+      "Fat Loss"
+    ],
+    "image": "/products/lyfe-pen-v2.png",
+    "images": [
+      "/products/lyfe-pen-v2.png",
+      "/products/glp2tr-10mg.jpg",
+      "/products/glp2tr-20mg.jpg",
+      "/products/glp2tr-30mg.jpg"
+    ],
+    "inStock": true,
+    "type": "variable",
+    "shortDescription": "<p>A research incretin-mimetic peptide (GLP-1 / GIP receptor pathways) for metabolic studies, available in multiple strengths. For research purposes only.</p>",
+    "description": "<p>GLP2TR is a research incretin-mimetic peptide that acts on both GLP-1 and GIP receptor pathways, a dual-receptor class of high interest in metabolic science.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Glucose and insulin regulation models</li>\n<li>Appetite, satiety and energy-intake research</li>\n<li>Body-composition and adiposity models</li>\n<li>Dual incretin-receptor (GLP-1 / GIP) signalling</li>\n</ul>\n<p>Available in multiple strengths as lyophilized powder; also available in the Lyfe pen.</p>",
+    "needsReview": false,
+    "attributes": [
+      {
+        "name": "Strength",
+        "options": [
+          "10mg",
+          "20mg",
+          "30mg"
+        ]
+      },
+      {
+        "name": "Package",
+        "options": [
+          "Single Pen",
+          "3x Pens",
+          "10x Pens",
+          "Single Vial",
+          "3x Vials",
+          "10x Vials"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": 567,
+        "priceCents": 8000,
+        "attrs": {
+          "Strength": "10mg",
+          "Package": "Single Vial"
+        },
+        "label": "Strength: 10mg, Package: Single Vial"
+      },
+      {
+        "id": 630,
+        "priceCents": 15000,
+        "attrs": {
+          "Strength": "20mg",
+          "Package": "Single Vial"
+        },
+        "label": "Strength: 20mg, Package: Single Vial"
+      },
+      {
+        "id": 449,
+        "priceCents": 17999,
+        "attrs": {
+          "Strength": "10mg",
+          "Package": "Single Pen"
+        },
+        "label": "Strength: 10mg, Package: Single Pen"
+      },
+      {
+        "id": 633,
+        "priceCents": 20000,
+        "attrs": {
+          "Strength": "30mg",
+          "Package": "Single Vial"
+        },
+        "label": "Strength: 30mg, Package: Single Vial"
+      },
+      {
+        "id": 568,
+        "priceCents": 22500,
+        "attrs": {
+          "Strength": "10mg",
+          "Package": "3x Vials"
+        },
+        "label": "Strength: 10mg, Package: 3x Vials"
+      },
+      {
+        "id": 685,
+        "priceCents": 22999,
+        "attrs": {
+          "Strength": "20mg",
+          "Package": "Single Pen"
+        },
+        "label": "Strength: 20mg, Package: Single Pen"
+      },
+      {
+        "id": 686,
+        "priceCents": 29999,
+        "attrs": {
+          "Strength": "30mg",
+          "Package": "Single Pen"
+        },
+        "label": "Strength: 30mg, Package: Single Pen"
+      },
+      {
+        "id": 631,
+        "priceCents": 43500,
+        "attrs": {
+          "Strength": "20mg",
+          "Package": "3x Vials"
+        },
+        "label": "Strength: 20mg, Package: 3x Vials"
+      },
+      {
+        "id": 450,
+        "priceCents": 51299,
+        "attrs": {
+          "Strength": "10mg",
+          "Package": "3x Pens"
+        },
+        "label": "Strength: 10mg, Package: 3x Pens"
+      },
+      {
+        "id": 634,
+        "priceCents": 58500,
+        "attrs": {
+          "Strength": "30mg",
+          "Package": "3x Vials"
+        },
+        "label": "Strength: 30mg, Package: 3x Vials"
+      },
+      {
+        "id": 569,
+        "priceCents": 70000,
+        "attrs": {
+          "Strength": "10mg",
+          "Package": "10x Vials"
+        },
+        "label": "Strength: 10mg, Package: 10x Vials"
+      },
+      {
+        "id": 632,
+        "priceCents": 140000,
+        "attrs": {
+          "Strength": "20mg",
+          "Package": "10x Vials"
+        },
+        "label": "Strength: 20mg, Package: 10x Vials"
+      },
+      {
+        "id": 451,
+        "priceCents": 161999,
+        "attrs": {
+          "Strength": "10mg",
+          "Package": "10x Pens"
+        },
+        "label": "Strength: 10mg, Package: 10x Pens"
+      },
+      {
+        "id": 635,
+        "priceCents": 190000,
+        "attrs": {
+          "Strength": "30mg",
+          "Package": "10x Vials"
+        },
+        "label": "Strength: 30mg, Package: 10x Vials"
+      }
+    ],
+    "priceMin": 8000,
+    "priceMax": 190000,
+    "priceCents": 8000
+  },
+  {
+    "id": 103,
+    "name": "CJC-1295 + Ipamorelin 20 mg",
+    "slug": "cjc-1295-ipamorelin-20-mg",
+    "category": "Growth Factors",
+    "categories": [
+      "Growth Factors"
+    ],
+    "tags": [
+      "Muscle & Growth"
+    ],
+    "image": "/products/lyfe-pen-v2.png",
+    "images": [
+      "/products/lyfe-pen-v2.png",
+      "/products/cjc-1295-ipamorelin.png"
+    ],
+    "inStock": true,
+    "type": "variable",
+    "shortDescription": "<p>CJC-1295 and Ipamorelin blend, 20 mg – a GHRH analog paired with a selective growth-hormone secretagogue. For research purposes only.</p>",
+    "description": "<p>A blend of CJC-1295, a growth-hormone-releasing hormone (GHRH) analog, and Ipamorelin, a selective ghrelin-receptor agonist. The two act on complementary pathways and are frequently paired in secretagogue research.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Synergistic growth-hormone release from two mechanisms</li>\n<li>Pulsatile GH secretion and IGF-1 axis models</li>\n<li>Ghrelin-receptor (GHS-R) and GHRH-receptor signalling</li>\n<li>Body-composition and metabolic research models</li>\n</ul>\n<p>Supplied as 20 mg lyophilized powder; also available loaded in the Lyfe pen.</p>",
+    "needsReview": false,
+    "attributes": [
+      {
+        "name": "Package",
+        "options": [
+          "Single Pen",
+          "3x Pens",
+          "10x Pens",
+          "Single Vial",
+          "3x Vials",
+          "10x Vials"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": 555,
+        "priceCents": 9500,
+        "attrs": {
+          "Package": "Single Vial"
+        },
+        "label": "Package: Single Vial"
+      },
+      {
+        "id": 556,
+        "priceCents": 27000,
+        "attrs": {
+          "Package": "3x Vials"
+        },
+        "label": "Package: 3x Vials"
+      },
+      {
+        "id": 437,
+        "priceCents": 28999,
+        "attrs": {
+          "Package": "Single Pen"
+        },
+        "label": "Package: Single Pen"
+      },
+      {
+        "id": 438,
+        "priceCents": 83499,
+        "attrs": {
+          "Package": "3x Pens"
+        },
+        "label": "Package: 3x Pens"
+      },
+      {
+        "id": 557,
+        "priceCents": 85000,
+        "attrs": {
+          "Package": "10x Vials"
+        },
+        "label": "Package: 10x Vials"
+      },
+      {
+        "id": 439,
+        "priceCents": 266799,
+        "attrs": {
+          "Package": "10x Pens"
+        },
+        "label": "Package: 10x Pens"
+      }
+    ],
+    "priceMin": 9500,
+    "priceMax": 266799,
+    "priceCents": 9500
+  },
+  {
+    "id": 102,
+    "name": "TB-500 + BPC-157 20 mg",
+    "slug": "tb-500-bpc-157-10-mg",
+    "category": "Recovery",
+    "categories": [
+      "Recovery"
+    ],
+    "tags": [
+      "Gut Health",
+      "Recovery"
+    ],
+    "image": "/products/lyfe-pen-v2.png",
+    "images": [
+      "/products/lyfe-pen-v2.png",
+      "/products/tb-500-bpc-157.png"
+    ],
+    "inStock": true,
+    "type": "variable",
+    "shortDescription": "<p>TB-500 and BPC-157 recovery blend, 20 mg. For research purposes only.</p>",
+    "description": "<p>A blend of TB-500 (a Thymosin Beta-4 fragment) and BPC-157 (Body Protection Compound), two of the most-referenced recovery peptides, frequently studied together.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Combined connective-tissue and muscle repair models</li>\n<li>Angiogenesis and blood-vessel formation</li>\n<li>Tendon, ligament and gastrointestinal research</li>\n<li>Inflammation and recovery pathways</li>\n</ul>\n<p>Supplied as 20 mg lyophilized powder; also available in the Lyfe pen.</p>",
+    "needsReview": false,
+    "attributes": [
+      {
+        "name": "Package",
+        "options": [
+          "Single Pen",
+          "3x Pens",
+          "10x Pens",
+          "Single Vial",
+          "3x Vials",
+          "10x Vials"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": 571,
+        "priceCents": 11000,
+        "attrs": {
+          "Package": "Single Vial"
+        },
+        "label": "Package: Single Vial"
+      },
+      {
+        "id": 425,
+        "priceCents": 28999,
+        "attrs": {
+          "Package": "Single Pen"
+        },
+        "label": "Package: Single Pen"
+      },
+      {
+        "id": 572,
+        "priceCents": 31500,
+        "attrs": {
+          "Package": "3x Vials"
+        },
+        "label": "Package: 3x Vials"
+      },
+      {
+        "id": 426,
+        "priceCents": 84099,
+        "attrs": {
+          "Package": "3x Pens"
+        },
+        "label": "Package: 3x Pens"
+      },
+      {
+        "id": 573,
+        "priceCents": 100000,
+        "attrs": {
+          "Package": "10x Vials"
+        },
+        "label": "Package: 10x Vials"
+      },
+      {
+        "id": 427,
+        "priceCents": 270699,
+        "attrs": {
+          "Package": "10x Pens"
+        },
+        "label": "Package: 10x Pens"
+      }
+    ],
+    "priceMin": 11000,
+    "priceMax": 270699,
+    "priceCents": 11000
+  },
+  {
+    "id": 51,
+    "name": "Tesamorelin 20 mg",
+    "slug": "tesamorelin-20-mg",
+    "category": "Growth Factors",
+    "categories": [
+      "Growth Factors"
+    ],
+    "tags": [
+      "Muscle & Growth"
+    ],
+    "image": "/products/lyfe-pen-v2.png",
+    "images": [
+      "/products/lyfe-pen-v2.png",
+      "/products/tesamorelin-20mg.png"
+    ],
+    "inStock": true,
+    "type": "variable",
+    "shortDescription": "<p>Tesamorelin, a stabilized growth-hormone-releasing hormone (GHRH) analog, 20 mg. For research purposes only.</p>",
+    "description": "<p>Tesamorelin is a synthetic, stabilized analog of growth-hormone-releasing hormone (GHRH), notable in research for its effect on the GH axis and fat metabolism.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>The GH / IGF-1 axis and secretagogue signalling</li>\n<li>Adipose-tissue metabolism and visceral-fat models</li>\n<li>Lipid metabolism research</li>\n<li>Body-composition studies</li>\n</ul>\n<p>Supplied as 20 mg lyophilized powder; also available in the Lyfe pen.</p>",
+    "needsReview": false,
+    "attributes": [
+      {
+        "name": "Package",
+        "options": [
+          "Single Pen",
+          "3x Pens",
+          "10x Pens",
+          "Single Vial",
+          "3x Vials",
+          "10x Vials"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": 563,
+        "priceCents": 13600,
+        "attrs": {
+          "Package": "Single Vial"
+        },
+        "label": "Package: Single Vial"
+      },
+      {
+        "id": 446,
+        "priceCents": 24999,
+        "attrs": {
+          "Package": "Single Pen"
+        },
+        "label": "Package: Single Pen"
+      },
+      {
+        "id": 564,
+        "priceCents": 39300,
+        "attrs": {
+          "Package": "3x Vials"
+        },
+        "label": "Package: 3x Vials"
+      },
+      {
+        "id": 447,
+        "priceCents": 72699,
+        "attrs": {
+          "Package": "3x Pens"
+        },
+        "label": "Package: 3x Pens"
+      },
+      {
+        "id": 565,
+        "priceCents": 126000,
+        "attrs": {
+          "Package": "10x Vials"
+        },
+        "label": "Package: 10x Vials"
+      },
+      {
+        "id": 448,
+        "priceCents": 234399,
+        "attrs": {
+          "Package": "10x Pens"
+        },
+        "label": "Package: 10x Pens"
+      }
+    ],
+    "priceMin": 13600,
+    "priceMax": 234399,
+    "priceCents": 13600
+  },
+  {
+    "id": 50,
+    "name": "IGF-1 LR3 1 mg",
+    "slug": "igf-1-lr3-1-mg",
+    "category": "Growth Factors",
+    "categories": [
+      "Growth Factors"
+    ],
+    "tags": [
+      "Muscle & Growth"
+    ],
+    "image": "/products/igf-1-lr3-1mg.png",
+    "images": [
+      "/products/igf-1-lr3-1mg.png",
+      "/products/pen-lyfe.png"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>IGF-1 LR3, a long-acting analog of insulin-like growth factor 1, 1 mg. For research purposes only.</p>",
+    "description": "<p>IGF-1 LR3 (Long R3) is a modified, long-acting analog of insulin-like growth factor 1 with a much longer half-life than native IGF-1 due to reduced binding-protein affinity.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Cell proliferation, differentiation and growth models</li>\n<li>Muscle and tissue-growth research</li>\n<li>IGF-1 receptor signalling</li>\n<li>Extended half-life and bioavailability studies</li>\n</ul>\n<p>Supplied as 1 mg lyophilized powder for reconstitution.</p>",
+    "needsReview": false,
+    "priceCents": 8000,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 49,
+    "name": "Selank 10 mg",
+    "slug": "selank-10-mg",
+    "category": "Research Chemicals",
+    "categories": [
+      "Research Chemicals"
+    ],
+    "tags": [
+      "Cognitive"
+    ],
+    "image": "/products/selank-10mg.png",
+    "images": [
+      "/products/selank-10mg.png",
+      "/products/pen-lyfe.png"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>Selank, a synthetic tuftsin-derived peptide studied in anxiolytic and nootropic research, 10 mg. For research purposes only.</p>",
+    "description": "<p>Selank is a synthetic heptapeptide derived from the immunomodulatory peptide tuftsin, studied as an anxiolytic and nootropic research compound.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Anxiety-related behaviour and stress models</li>\n<li>Cognition, memory and attention research</li>\n<li>BDNF and neurotransmitter (GABA, serotonin) modulation</li>\n<li>Immune-modulating activity</li>\n</ul>\n<p>Supplied as 10 mg lyophilized powder for reconstitution.</p>",
+    "needsReview": false,
+    "priceCents": 5000,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 48,
+    "name": "Semax 10 mg",
+    "slug": "semax-10-mg",
+    "category": "Research Chemicals",
+    "categories": [
+      "Research Chemicals"
+    ],
+    "tags": [
+      "Cognitive"
+    ],
+    "image": "/products/semax-10mg.png",
+    "images": [
+      "/products/semax-10mg.png",
+      "/products/pen-lyfe.png"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>Semax, a synthetic ACTH(4-10) analog studied in neuro and nootropic research, 10 mg. For research purposes only.</p>",
+    "description": "<p>Semax is a synthetic peptide analog of a fragment of adrenocorticotropic hormone (ACTH 4-10), widely studied in neuroscience research.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Cognition, learning and nootropic research</li>\n<li>Neuroprotection and recovery models</li>\n<li>BDNF and NGF expression</li>\n<li>Stress-response and attention studies</li>\n</ul>\n<p>Supplied as 10 mg lyophilized powder for reconstitution.</p>",
+    "needsReview": false,
+    "priceCents": 4500,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 47,
+    "name": "HCG 10,000 IU",
+    "slug": "hcg-10000-iu",
+    "category": "Performance",
+    "categories": [
+      "Performance"
+    ],
+    "tags": [
+      "Muscle & Growth",
+      "Sexual Health"
+    ],
+    "image": "/products/hcg-10000iu.png",
+    "images": [
+      "/products/hcg-10000iu.png",
+      "/products/pen-lyfe.png"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>HCG (human chorionic gonadotropin), 10,000 IU lyophilized, for endocrine and reproductive research. For research purposes only.</p>",
+    "description": "<p>Human chorionic gonadotropin (HCG) is a glycoprotein hormone that acts on the LH receptor, making it a common tool in reproductive and endocrine research.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Reproductive endocrinology and gonadal-function models</li>\n<li>LH-receptor signalling</li>\n<li>Steroidogenesis – testosterone and progesterone production in models</li>\n<li>Ovulation and fertility research</li>\n</ul>\n<p>Supplied as 10,000 IU lyophilized powder for reconstitution.</p>",
+    "needsReview": false,
+    "priceCents": 10000,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 46,
+    "name": "Klow 80 mg",
+    "slug": "klow-80-mg",
+    "category": "Anti-Aging",
+    "categories": [
+      "Anti-Aging"
+    ],
+    "tags": [
+      "Anti-Aging & Skin",
+      "Gut Health"
+    ],
+    "image": "/products/klow-80mg.png",
+    "images": [
+      "/products/klow-80mg.png",
+      "/products/pen-lyfe.png"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>Klow, a multi-peptide skin and recovery blend (GHK-Cu, KPV, BPC-157 and TB-500), 80 mg. For research purposes only.</p>",
+    "description": "<p>Klow is a multi-peptide blend combining the copper peptide GHK-Cu and KPV with the repair peptides BPC-157 and TB-500 – a comprehensive combination for skin-and-recovery research.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Skin quality, collagen synthesis and dermal repair</li>\n<li>Systemic tissue recovery and connective-tissue models</li>\n<li>Anti-inflammatory and immune signalling</li>\n<li>Combined regenerative-pathway research</li>\n</ul>\n<p>Supplied as 80 mg lyophilized powder for reconstitution.</p>",
+    "needsReview": false,
+    "priceCents": 17000,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 45,
+    "name": "Glow 70 mg",
+    "slug": "glow-70-mg",
+    "category": "Anti-Aging",
+    "categories": [
+      "Anti-Aging"
+    ],
+    "tags": [
+      "Anti-Aging & Skin"
+    ],
+    "image": "/products/lyfe-pen-purple.jpg",
+    "images": [
+      "/products/lyfe-pen-purple.jpg",
+      "/products/glow-70mg.png"
+    ],
+    "inStock": true,
+    "type": "variable",
+    "shortDescription": "<p>Glow, a copper-peptide skin and recovery blend (GHK-Cu with BPC-157 and TB-500), 70 mg. For research purposes only.</p>",
+    "description": "<p>Glow is a multi-peptide blend combining the copper peptide GHK-Cu with the repair peptides BPC-157 and TB-500 – a popular combination in skin-and-recovery research.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Skin quality, collagen synthesis and dermal appearance</li>\n<li>Systemic tissue recovery and connective-tissue repair</li>\n<li>Angiogenesis and microcirculation models</li>\n<li>Combined regenerative-pathway research</li>\n</ul>\n<p>Supplied as 70 mg lyophilized powder; also available in the Lyfe pen.</p>",
+    "needsReview": false,
+    "attributes": [
+      {
+        "name": "Package",
+        "options": [
+          "Single Pen",
+          "3x Pens",
+          "10x Pens",
+          "Single Vial",
+          "3x Vials",
+          "10x Vials"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": 559,
+        "priceCents": 15000,
+        "attrs": {
+          "Package": "Single Vial"
+        },
+        "label": "Package: Single Vial"
+      },
+      {
+        "id": 440,
+        "priceCents": 30999,
+        "attrs": {
+          "Package": "Single Pen"
+        },
+        "label": "Package: Single Pen"
+      },
+      {
+        "id": 560,
+        "priceCents": 43500,
+        "attrs": {
+          "Package": "3x Vials"
+        },
+        "label": "Package: 3x Vials"
+      },
+      {
+        "id": 441,
+        "priceCents": 90699,
+        "attrs": {
+          "Package": "3x Pens"
+        },
+        "label": "Package: 3x Pens"
+      },
+      {
+        "id": 561,
+        "priceCents": 140000,
+        "attrs": {
+          "Package": "10x Vials"
+        },
+        "label": "Package: 10x Vials"
+      },
+      {
+        "id": 442,
+        "priceCents": 294499,
+        "attrs": {
+          "Package": "10x Pens"
+        },
+        "label": "Package: 10x Pens"
+      }
+    ],
+    "priceMin": 15000,
+    "priceMax": 294499,
+    "priceCents": 15000
+  },
+  {
+    "id": 44,
+    "name": "CJC-1295 10 mg",
+    "slug": "cjc-1295-10-mg",
+    "category": "Growth Factors",
+    "categories": [
+      "Growth Factors"
+    ],
+    "tags": [
+      "Muscle & Growth",
+      "Sexual Health"
+    ],
+    "image": "/products/cjc-1295-10mg.png",
+    "images": [
+      "/products/cjc-1295-10mg.png",
+      "/products/pen-lyfe.png"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>CJC-1295, a synthetic growth-hormone-releasing hormone (GHRH) analog, 10 mg lyophilized. For research purposes only.</p>",
+    "description": "<p>CJC-1295 is a synthetic analog of growth-hormone-releasing hormone (GHRH) designed for an extended duration of action.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Stimulation of endogenous growth-hormone (GH) release</li>\n<li>Downstream IGF-1 production and the GH/IGF-1 axis</li>\n<li>Growth-hormone pulse amplitude and somatotroph signalling</li>\n<li>Comparative studies of long-acting secretagogues</li>\n</ul>\n<p>Supplied as 10 mg lyophilized powder for reconstitution.</p>",
+    "needsReview": false,
+    "priceCents": 7500,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 43,
+    "name": "HGH 191AA (Full Sequence) 12 mg",
+    "slug": "hgh-191aa-full-sequence-12-mg",
+    "category": "Growth Factors",
+    "categories": [
+      "Growth Factors"
+    ],
+    "tags": [
+      "Muscle & Growth",
+      "Sexual Health"
+    ],
+    "image": "/products/lyfe-pen-v2.png",
+    "images": [
+      "/products/lyfe-pen-v2.png",
+      "/products/hgh-191aa-12mg.png"
+    ],
+    "inStock": true,
+    "type": "variable",
+    "shortDescription": "<p>HGH 191AA, the full 191-amino-acid recombinant growth-hormone sequence, 12 mg. For research purposes only.</p>",
+    "description": "<p>HGH 191AA is the full-length, 191-amino-acid recombinant sequence of human growth hormone, used as a reference molecule across metabolic and growth research.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>The somatotropic (GH) axis and IGF-1 stimulation</li>\n<li>Protein synthesis, cell growth and differentiation models</li>\n<li>Lipid and carbohydrate metabolism</li>\n<li>Tissue-growth and recovery research</li>\n</ul>\n<p>Supplied as 12 mg lyophilized powder; also available in the Lyfe pen.</p>",
+    "needsReview": false,
+    "attributes": [
+      {
+        "name": "Package",
+        "options": [
+          "Single Pen",
+          "3x Pens",
+          "10x Pens",
+          "Single Vial",
+          "3x Vials",
+          "10x Vials"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": 651,
+        "priceCents": 8000,
+        "attrs": {
+          "Package": "Single Vial"
+        },
+        "label": "Package: Single Vial"
+      },
+      {
+        "id": 652,
+        "priceCents": 22500,
+        "attrs": {
+          "Package": "3x Vials"
+        },
+        "label": "Package: 3x Vials"
+      },
+      {
+        "id": 648,
+        "priceCents": 24999,
+        "attrs": {
+          "Package": "Single Pen"
+        },
+        "label": "Package: Single Pen"
+      },
+      {
+        "id": 653,
+        "priceCents": 70000,
+        "attrs": {
+          "Package": "10x Vials"
+        },
+        "label": "Package: 10x Vials"
+      },
+      {
+        "id": 649,
+        "priceCents": 72499,
+        "attrs": {
+          "Package": "3x Pens"
+        },
+        "label": "Package: 3x Pens"
+      },
+      {
+        "id": 650,
+        "priceCents": 233299,
+        "attrs": {
+          "Package": "10x Pens"
+        },
+        "label": "Package: 10x Pens"
+      }
+    ],
+    "priceMin": 8000,
+    "priceMax": 233299,
+    "priceCents": 8000
+  },
+  {
+    "id": 42,
+    "name": "TB-500 (Full Sequence) 10 mg",
+    "slug": "tb-500-full-sequence-10-mg",
+    "category": "Recovery",
+    "categories": [
+      "Recovery"
+    ],
+    "tags": [
+      "Recovery",
+      "Sexual Health"
+    ],
+    "image": "/products/lyfe-pen-v2.png",
+    "images": [
+      "/products/lyfe-pen-v2.png",
+      "/products/tb-500-10mg.png"
+    ],
+    "inStock": true,
+    "type": "variable",
+    "shortDescription": "<p>TB-500, a synthetic fragment of Thymosin Beta-4, 10 mg, studied in recovery research. For research purposes only.</p>",
+    "description": "<p>TB-500 is a synthetic peptide based on the active region of Thymosin Beta-4, a naturally occurring protein central to cell migration and repair.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Actin regulation and cell migration</li>\n<li>Angiogenesis and microcirculation</li>\n<li>Muscle, tendon and tissue-recovery models</li>\n<li>Inflammation modulation</li>\n</ul>\n<p>Supplied as 10 mg lyophilized powder; also available in the Lyfe pen.</p>",
+    "needsReview": false,
+    "attributes": [
+      {
+        "name": "Package",
+        "options": [
+          "Single Pen",
+          "3x Pens",
+          "10x Pens",
+          "Single Vial",
+          "3x Vials",
+          "10x Vials"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": 645,
+        "priceCents": 8000,
+        "attrs": {
+          "Package": "Single Vial"
+        },
+        "label": "Package: Single Vial"
+      },
+      {
+        "id": 642,
+        "priceCents": 17999,
+        "attrs": {
+          "Package": "Single Pen"
+        },
+        "label": "Package: Single Pen"
+      },
+      {
+        "id": 646,
+        "priceCents": 22500,
+        "attrs": {
+          "Package": "3x Vials"
+        },
+        "label": "Package: 3x Vials"
+      },
+      {
+        "id": 643,
+        "priceCents": 51399,
+        "attrs": {
+          "Package": "3x Pens"
+        },
+        "label": "Package: 3x Pens"
+      },
+      {
+        "id": 647,
+        "priceCents": 70000,
+        "attrs": {
+          "Package": "10x Vials"
+        },
+        "label": "Package: 10x Vials"
+      },
+      {
+        "id": 644,
+        "priceCents": 162799,
+        "attrs": {
+          "Package": "10x Pens"
+        },
+        "label": "Package: 10x Pens"
+      }
+    ],
+    "priceMin": 8000,
+    "priceMax": 162799,
+    "priceCents": 8000
+  },
+  {
+    "id": 41,
+    "name": "BPC-157 10 mg",
+    "slug": "bpc-157-10-mg",
+    "category": "Recovery",
+    "categories": [
+      "Recovery"
+    ],
+    "tags": [
+      "Gut Health",
+      "Recovery",
+      "Sexual Health"
+    ],
+    "image": "/products/lyfe-pen-v2.png",
+    "images": [
+      "/products/lyfe-pen-v2.png",
+      "/products/bpc-157-10mg.png"
+    ],
+    "inStock": true,
+    "type": "variable",
+    "shortDescription": "<p>BPC-157 (Body Protection Compound), a stable pentadecapeptide supplied as 10 mg lyophilized powder. For research purposes only.</p>",
+    "description": "<p>BPC-157 (Body Protection Compound) is a synthetic pentadecapeptide derived from a protective protein found in gastric juice. It is one of the most widely referenced peptides in tissue-repair literature.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Tendon, ligament, muscle and connective-tissue repair models</li>\n<li>Gut-lining integrity and gastrointestinal research</li>\n<li>Angiogenesis – the formation of new blood vessels</li>\n<li>Growth-factor and nitric-oxide signalling pathways</li>\n</ul>\n<p>Supplied as 10 mg lyophilized powder for reconstitution; also available loaded in the Lyfe pen.</p>",
+    "needsReview": false,
+    "attributes": [
+      {
+        "name": "Package",
+        "options": [
+          "Single Pen",
+          "3x Pens",
+          "10x Pens",
+          "Single Vial",
+          "3x Vials",
+          "10x Vials"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": 639,
+        "priceCents": 7500,
+        "attrs": {
+          "Package": "Single Vial"
+        },
+        "label": "Package: Single Vial"
+      },
+      {
+        "id": 636,
+        "priceCents": 17999,
+        "attrs": {
+          "Package": "Single Pen"
+        },
+        "label": "Package: Single Pen"
+      },
+      {
+        "id": 640,
+        "priceCents": 21000,
+        "attrs": {
+          "Package": "3x Vials"
+        },
+        "label": "Package: 3x Vials"
+      },
+      {
+        "id": 637,
+        "priceCents": 51299,
+        "attrs": {
+          "Package": "3x Pens"
+        },
+        "label": "Package: 3x Pens"
+      },
+      {
+        "id": 641,
+        "priceCents": 65000,
+        "attrs": {
+          "Package": "10x Vials"
+        },
+        "label": "Package: 10x Vials"
+      },
+      {
+        "id": 638,
+        "priceCents": 161999,
+        "attrs": {
+          "Package": "10x Pens"
+        },
+        "label": "Package: 10x Pens"
+      }
+    ],
+    "priceMin": 7500,
+    "priceMax": 161999,
+    "priceCents": 7500
+  },
+  {
+    "id": 40,
+    "name": "Ipamorelin 10 mg",
+    "slug": "ipamorelin-10-mg",
+    "category": "Growth Factors",
+    "categories": [
+      "Growth Factors"
+    ],
+    "tags": [
+      "Muscle & Growth",
+      "Sexual Health"
+    ],
+    "image": "/products/ipamorelin-10mg.png",
+    "images": [
+      "/products/ipamorelin-10mg.png",
+      "/products/pen-lyfe.png"
+    ],
+    "inStock": false,
+    "type": "simple",
+    "shortDescription": "<p>Ipamorelin, a selective ghrelin-receptor agonist and growth-hormone secretagogue, 10 mg. For research purposes only.</p>",
+    "description": "<p>Ipamorelin is a selective ghrelin-receptor agonist and growth-hormone secretagogue, valued in research for its clean, targeted pattern of GH release.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Selective GH release with minimal cortisol or prolactin impact</li>\n<li>Ghrelin-receptor (GHS-R) signalling</li>\n<li>Growth-hormone pulsatility and IGF-1 models</li>\n<li>Appetite and metabolic research</li>\n</ul>\n<p>Supplied as 10 mg lyophilized powder for reconstitution.</p>",
+    "needsReview": false,
+    "priceCents": 5500,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 39,
+    "name": "GHK-Cu 50 mg",
+    "slug": "ghk-cu-50-mg",
+    "category": "Anti-Aging",
+    "categories": [
+      "Anti-Aging"
+    ],
+    "tags": [
+      "Anti-Aging & Skin"
+    ],
+    "image": "/products/lyfe-pen-purple.jpg",
+    "images": [
+      "/products/lyfe-pen-purple.jpg",
+      "/products/ghk-cu-50mg.png"
+    ],
+    "inStock": true,
+    "type": "variable",
+    "shortDescription": "<p>GHK-Cu, the copper-binding tripeptide, 50 mg, widely studied in skin and collagen research. For research purposes only.</p>",
+    "description": "<p>GHK-Cu is a naturally occurring copper-binding tripeptide (glycyl-L-histidyl-L-lysine) whose levels decline with age, making it a heavily studied molecule in skin and regenerative research.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Collagen and elastin synthesis and skin remodelling</li>\n<li>Wound-healing and dermal-repair pathways</li>\n<li>Antioxidant and anti-inflammatory signalling</li>\n<li>Hair-follicle research and gene-expression modulation</li>\n</ul>\n<p>Supplied as 50 mg lyophilized powder; also available in the Lyfe pen.</p>",
+    "needsReview": false,
+    "attributes": [
+      {
+        "name": "Package",
+        "options": [
+          "Single Pen",
+          "3x Pens",
+          "10x Pens",
+          "Single Vial",
+          "3x Vials",
+          "10x Vials"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": 539,
+        "priceCents": 5000,
+        "attrs": {
+          "Package": "Single Vial"
+        },
+        "label": "Package: Single Vial"
+      },
+      {
+        "id": 540,
+        "priceCents": 13500,
+        "attrs": {
+          "Package": "3x Vials"
+        },
+        "label": "Package: 3x Vials"
+      },
+      {
+        "id": 422,
+        "priceCents": 21999,
+        "attrs": {
+          "Package": "Single Pen"
+        },
+        "label": "Package: Single Pen"
+      },
+      {
+        "id": 541,
+        "priceCents": 40000,
+        "attrs": {
+          "Package": "10x Vials"
+        },
+        "label": "Package: 10x Vials"
+      },
+      {
+        "id": 423,
+        "priceCents": 62699,
+        "attrs": {
+          "Package": "3x Pens"
+        },
+        "label": "Package: 3x Pens"
+      },
+      {
+        "id": 424,
+        "priceCents": 197999,
+        "attrs": {
+          "Package": "10x Pens"
+        },
+        "label": "Package: 10x Pens"
+      }
+    ],
+    "priceMin": 5000,
+    "priceMax": 197999,
+    "priceCents": 5000
+  },
+  {
+    "id": 38,
+    "name": "MOTS-C 20 mg",
+    "slug": "mots-c-10-mg",
+    "category": "Performance",
+    "categories": [
+      "Performance"
+    ],
+    "tags": [
+      "Energy & Endurance"
+    ],
+    "image": "/products/lyfe-pen-v2.png",
+    "images": [
+      "/products/lyfe-pen-v2.png",
+      "/products/mots-c-20mg.jpg"
+    ],
+    "inStock": true,
+    "type": "variable",
+    "shortDescription": "<p>MOTS-c, a mitochondrial-derived peptide studied in metabolic research, 20 mg. For research purposes only.</p>",
+    "description": "<p>MOTS-c is a mitochondrial-derived peptide encoded within mitochondrial DNA, studied as a regulator of cellular metabolism and a signal of mitochondrial health.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Metabolic regulation and insulin sensitivity</li>\n<li>Glucose homeostasis and the AMPK pathway</li>\n<li>Exercise physiology and cellular energy metabolism</li>\n<li>Aging and metabolic-stress research</li>\n</ul>\n<p>Supplied as 20 mg lyophilized powder; also available in the Lyfe pen.</p>",
+    "needsReview": false,
+    "attributes": [
+      {
+        "name": "Package",
+        "options": [
+          "Single Pen",
+          "3x Pens",
+          "10x Pens",
+          "Single Vial",
+          "3x Vials",
+          "10x Vials"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": 543,
+        "priceCents": 10000,
+        "attrs": {
+          "Package": "Single Vial"
+        },
+        "label": "Package: Single Vial"
+      },
+      {
+        "id": 428,
+        "priceCents": 21999,
+        "attrs": {
+          "Package": "Single Pen"
+        },
+        "label": "Package: Single Pen"
+      },
+      {
+        "id": 544,
+        "priceCents": 28500,
+        "attrs": {
+          "Package": "3x Vials"
+        },
+        "label": "Package: 3x Vials"
+      },
+      {
+        "id": 429,
+        "priceCents": 63799,
+        "attrs": {
+          "Package": "3x Pens"
+        },
+        "label": "Package: 3x Pens"
+      },
+      {
+        "id": 545,
+        "priceCents": 90000,
+        "attrs": {
+          "Package": "10x Vials"
+        },
+        "label": "Package: 10x Vials"
+      },
+      {
+        "id": 430,
+        "priceCents": 205299,
+        "attrs": {
+          "Package": "10x Pens"
+        },
+        "label": "Package: 10x Pens"
+      }
+    ],
+    "priceMin": 10000,
+    "priceMax": 205299,
+    "priceCents": 10000
+  },
+  {
+    "id": 36,
+    "name": "GLP3RT",
+    "slug": "glp3rt",
+    "category": "Weight Loss",
+    "categories": [
+      "Weight Loss"
+    ],
+    "tags": [
+      "Fat Loss"
+    ],
+    "image": "/products/lyfe-pen-v2.png",
+    "images": [
+      "/products/lyfe-pen-v2.png",
+      "/products/glp3rt-5mg.png",
+      "/products/glp3rt-10mg.png",
+      "/products/glp3rt-20mg.png"
+    ],
+    "inStock": true,
+    "type": "variable",
+    "shortDescription": "<p>A research triple-receptor incretin peptide (GLP-1 / GIP / glucagon) for metabolic studies, available in multiple strengths. For research purposes only.</p>",
+    "description": "<p>GLP3RT is a research incretin-mimetic peptide with activity across three pathways – GLP-1, GIP and glucagon receptors – representing the triple-agonist class studied in metabolic research.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Metabolic regulation and glucose-handling models</li>\n<li>Energy expenditure and lipid-metabolism research</li>\n<li>Body-weight and adiposity models</li>\n<li>Multi-receptor incretin and glucagon signalling</li>\n</ul>\n<p>Available in multiple strengths as lyophilized powder; also available in the Lyfe pen.</p>",
+    "needsReview": false,
+    "attributes": [
+      {
+        "name": "Strength",
+        "options": [
+          "5mg",
+          "10mg",
+          "15mg",
+          "20mg"
+        ]
+      },
+      {
+        "name": "Package",
+        "options": [
+          "Single Pen",
+          "3x Pens",
+          "10x Pens",
+          "Single Vial",
+          "3x Vials",
+          "10x Vials"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": 621,
+        "priceCents": 7500,
+        "attrs": {
+          "Strength": "5mg",
+          "Package": "Single Vial"
+        },
+        "label": "Strength: 5mg, Package: Single Vial"
+      },
+      {
+        "id": 627,
+        "priceCents": 10000,
+        "attrs": {
+          "Strength": "10mg",
+          "Package": "Single Vial"
+        },
+        "label": "Strength: 10mg, Package: Single Vial"
+      },
+      {
+        "id": 713,
+        "priceCents": 12500,
+        "attrs": {
+          "Strength": "15mg",
+          "Package": "Single Vial"
+        },
+        "label": "Strength: 15mg, Package: Single Vial"
+      },
+      {
+        "id": 618,
+        "priceCents": 14999,
+        "attrs": {
+          "Strength": "5mg",
+          "Package": "Single Pen"
+        },
+        "label": "Strength: 5mg, Package: Single Pen"
+      },
+      {
+        "id": 606,
+        "priceCents": 15000,
+        "attrs": {
+          "Strength": "20mg",
+          "Package": "Single Vial"
+        },
+        "label": "Strength: 20mg, Package: Single Vial"
+      },
+      {
+        "id": 622,
+        "priceCents": 21000,
+        "attrs": {
+          "Strength": "5mg",
+          "Package": "3x Vials"
+        },
+        "label": "Strength: 5mg, Package: 3x Vials"
+      },
+      {
+        "id": 624,
+        "priceCents": 24999,
+        "attrs": {
+          "Strength": "10mg",
+          "Package": "Single Pen"
+        },
+        "label": "Strength: 10mg, Package: Single Pen"
+      },
+      {
+        "id": 628,
+        "priceCents": 28500,
+        "attrs": {
+          "Strength": "10mg",
+          "Package": "3x Vials"
+        },
+        "label": "Strength: 10mg, Package: 3x Vials"
+      },
+      {
+        "id": 714,
+        "priceCents": 36000,
+        "attrs": {
+          "Strength": "15mg",
+          "Package": "3x Vials"
+        },
+        "label": "Strength: 15mg, Package: 3x Vials"
+      },
+      {
+        "id": 603,
+        "priceCents": 39999,
+        "attrs": {
+          "Strength": "20mg",
+          "Package": "Single Pen"
+        },
+        "label": "Strength: 20mg, Package: Single Pen"
+      },
+      {
+        "id": 619,
+        "priceCents": 42699,
+        "attrs": {
+          "Strength": "5mg",
+          "Package": "3x Pens"
+        },
+        "label": "Strength: 5mg, Package: 3x Pens"
+      },
+      {
+        "id": 607,
+        "priceCents": 43500,
+        "attrs": {
+          "Strength": "20mg",
+          "Package": "3x Vials"
+        },
+        "label": "Strength: 20mg, Package: 3x Vials"
+      },
+      {
+        "id": 623,
+        "priceCents": 65000,
+        "attrs": {
+          "Strength": "5mg",
+          "Package": "10x Vials"
+        },
+        "label": "Strength: 5mg, Package: 10x Vials"
+      },
+      {
+        "id": 625,
+        "priceCents": 72899,
+        "attrs": {
+          "Strength": "10mg",
+          "Package": "3x Pens"
+        },
+        "label": "Strength: 10mg, Package: 3x Pens"
+      },
+      {
+        "id": 629,
+        "priceCents": 90000,
+        "attrs": {
+          "Strength": "10mg",
+          "Package": "10x Vials"
+        },
+        "label": "Strength: 10mg, Package: 10x Vials"
+      },
+      {
+        "id": 715,
+        "priceCents": 115000,
+        "attrs": {
+          "Strength": "15mg",
+          "Package": "10x Vials"
+        },
+        "label": "Strength: 15mg, Package: 10x Vials"
+      },
+      {
+        "id": 604,
+        "priceCents": 117299,
+        "attrs": {
+          "Strength": "20mg",
+          "Package": "3x Pens"
+        },
+        "label": "Strength: 20mg, Package: 3x Pens"
+      },
+      {
+        "id": 620,
+        "priceCents": 134999,
+        "attrs": {
+          "Strength": "5mg",
+          "Package": "10x Pens"
+        },
+        "label": "Strength: 5mg, Package: 10x Pens"
+      },
+      {
+        "id": 608,
+        "priceCents": 140000,
+        "attrs": {
+          "Strength": "20mg",
+          "Package": "10x Vials"
+        },
+        "label": "Strength: 20mg, Package: 10x Vials"
+      },
+      {
+        "id": 626,
+        "priceCents": 235699,
+        "attrs": {
+          "Strength": "10mg",
+          "Package": "10x Pens"
+        },
+        "label": "Strength: 10mg, Package: 10x Pens"
+      },
+      {
+        "id": 605,
+        "priceCents": 382199,
+        "attrs": {
+          "Strength": "20mg",
+          "Package": "10x Pens"
+        },
+        "label": "Strength: 20mg, Package: 10x Pens"
+      }
+    ],
+    "priceMin": 7500,
+    "priceMax": 382199,
+    "priceCents": 7500
+  },
+  {
+    "id": 35,
+    "name": "VIP 10 mg",
+    "slug": "vip-100-mg",
+    "category": "Performance",
+    "categories": [
+      "Performance"
+    ],
+    "tags": [
+      "Energy & Endurance",
+      "Fat Loss",
+      "Gut Health",
+      "Sexual Health"
+    ],
+    "image": "/products/vip-100mg.png",
+    "images": [
+      "/products/vip-100mg.png",
+      "/products/pen-lyfe.png"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>VIP (vasoactive intestinal peptide), 10 mg, studied in signalling and inflammation research. For research purposes only.</p>",
+    "description": "<p>VIP (vasoactive intestinal peptide) is a 28-amino-acid neuropeptide with broad signalling roles across the nervous, immune and vascular systems.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Vasodilation and vascular signalling</li>\n<li>Immune modulation and anti-inflammatory activity</li>\n<li>Circadian-rhythm and neuro signalling</li>\n<li>VPAC-receptor signalling and neuroprotection</li>\n</ul>\n<p>Supplied as 10 mg lyophilized powder for reconstitution.</p>",
+    "needsReview": false,
+    "priceCents": 9600,
+    "variants": [],
+    "attributes": []
+  },
+  {
+    "id": 34,
+    "name": "KPV 10 mg",
+    "slug": "kpv-10-mg",
+    "category": "Anti-Aging",
+    "categories": [
+      "Anti-Aging"
+    ],
+    "tags": [
+      "Anti-Aging & Skin",
+      "Gut Health",
+      "Recovery"
+    ],
+    "image": "/products/kpv-10mg.png",
+    "images": [
+      "/products/kpv-10mg.png",
+      "/products/pen-lyfe.png"
+    ],
+    "inStock": true,
+    "type": "simple",
+    "shortDescription": "<p>KPV, the C-terminal tripeptide of alpha-MSH, 10 mg, studied in inflammation research. For research purposes only.</p>",
+    "description": "<p>KPV is a tripeptide (lysine-proline-valine) corresponding to the C-terminal fragment of alpha-melanocyte-stimulating hormone (alpha-MSH), studied primarily for its anti-inflammatory activity.</p>\n<p><strong>Commonly explored in research for:</strong></p>\n<ul>\n<li>Anti-inflammatory and immune-modulating signalling</li>\n<li>Gut inflammation and colitis research models</li>\n<li>Melanocortin-pathway signalling</li>\n<li>Skin and mucosal research</li>\n</ul>\n<p>Supplied as 10 mg lyophilized powder for reconstitution.</p>",
+    "needsReview": false,
+    "priceCents": 7500,
+    "variants": [],
+    "attributes": []
+  }
+]
