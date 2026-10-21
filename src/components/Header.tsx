@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { useCart } from "@/lib/cart";
+import AccountButton from "./account/AccountButton";
 import {
   BoltIcon,
   CartIcon,
@@ -15,24 +16,27 @@ import {
   MenuIcon,
   SearchIcon,
   ShieldIcon,
+  SparkIcon,
   TruckIcon,
 } from "./icons";
 
-const TRUST = [
-  { Icon: ShieldIcon, text: "COA on every product" },
-  { Icon: FlaskIcon, text: "99%+ purity guaranteed" },
-  { Icon: TruckIcon, text: "Free shipping on orders over $300" },
-  { Icon: BoltIcon, text: "Same-day dispatch before 1 PM EST" },
-  { Icon: MapleIcon, text: "Proudly Canadian" },
-];
+// announcement icons, cycled through in order
+const BAR_ICONS = [ShieldIcon, FlaskIcon, TruckIcon, BoltIcon, MapleIcon];
 
 const NAV = [
   { href: "/about", label: "About" },
+  { href: "/blog", label: "Blog" },
   { href: "/documentation", label: "Documentation" },
   { href: "/contact", label: "Contact" },
 ];
 
-export default function Header({ categories }: { categories: { name: string; count: number }[] }) {
+export default function Header({
+  categories,
+  announcements,
+}: {
+  categories: { name: string; count: number }[];
+  announcements: string[];
+}) {
   const { count, open } = useCart();
   const pathname = usePathname();
   const router = useRouter();
@@ -75,31 +79,7 @@ export default function Header({ categories }: { categories: { name: string; cou
 
   return (
     <header className="sticky top-0 z-50">
-      {/* trust bar */}
-      <div className="bg-navy text-white">
-        <div className="wrap flex h-10 items-center justify-between gap-6 overflow-hidden">
-          <ul className="mx-auto hidden items-center gap-5 text-[0.8125rem] font-medium lg:flex">
-            {TRUST.map(({ Icon, text }, i) => (
-              <li key={text} className="flex items-center gap-2 whitespace-nowrap">
-                {i > 0 && <span className="mr-4 h-3.5 w-px bg-white/25" aria-hidden />}
-                <Icon className="h-4 w-4 text-white/90" />
-                {text}
-              </li>
-            ))}
-          </ul>
-          {/* small screens: a slow ticker */}
-          <div className="relative flex-1 overflow-hidden lg:hidden" aria-label="Store highlights">
-            <div className="flex w-max animate-[ticker_28s_linear_infinite] gap-8 text-[0.8125rem] font-medium">
-              {[...TRUST, ...TRUST].map(({ Icon, text }, i) => (
-                <span key={i} className="flex items-center gap-2 whitespace-nowrap" aria-hidden={i >= TRUST.length}>
-                  <Icon className="h-4 w-4" />
-                  {text}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+      <AnnouncementBar messages={announcements} />
 
       {/* main bar */}
       <div className="border-b border-line bg-white/95 backdrop-blur">
@@ -166,6 +146,7 @@ export default function Header({ categories }: { categories: { name: string; cou
           </form>
 
           <div className="ml-auto flex items-center gap-2 md:ml-0">
+            <AccountButton />
             <button
               type="button"
               onClick={open}
@@ -228,5 +209,83 @@ export default function Header({ categories }: { categories: { name: string; cou
         )}
       </div>
     </header>
+  );
+}
+
+// Seconds left before the 1 PM Toronto cutoff today, or null when today's dispatch has closed.
+function secondsToCutoff(now: Date): number | null {
+  const parts = Object.fromEntries(
+    new Intl.DateTimeFormat("en-CA", {
+      timeZone: "America/Toronto",
+      weekday: "short",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      hourCycle: "h23",
+    })
+      .formatToParts(now)
+      .map((p) => [p.type, p.value])
+  );
+  if (parts.weekday === "Sat" || parts.weekday === "Sun") return null;
+  const left = 13 * 3600 - (Number(parts.hour) * 3600 + Number(parts.minute) * 60 + Number(parts.second));
+  return left > 0 ? left : null;
+}
+
+const pad = (n: number) => String(n).padStart(2, "0");
+
+function Countdown() {
+  const [left, setLeft] = useState<number | null | undefined>(undefined);
+
+  useEffect(() => {
+    const tick = () => setLeft(secondsToCutoff(new Date()));
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  if (left === undefined) return <span>Same-day dispatch before 1 PM EST</span>;
+  if (left === null) return <span>Order now and it ships next business morning</span>;
+  return (
+    <span>
+      Order within{" "}
+      <span className="num rounded-md bg-white/10 px-1.5 py-0.5 font-bold text-white">
+        {pad(Math.floor(left / 3600))}h {pad(Math.floor((left % 3600) / 60))}m {pad(left % 60)}s
+      </span>{" "}
+      for same-day dispatch
+    </span>
+  );
+}
+
+function AnnouncementBar({ messages }: { messages: string[] }) {
+  const trust = messages.map((text, i) => ({ Icon: BAR_ICONS[i % BAR_ICONS.length], text }));
+  const items = [...trust, ...trust];
+  return (
+    <div className="relative overflow-hidden bg-navy-2 text-white">
+      <span
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(100deg,transparent_20%,rgb(242_106_33/0.18)_45%,rgb(224_78_139/0.14)_55%,transparent_80%)] bg-[length:200%_100%] animate-[hue-pan_9s_linear_infinite]"
+        aria-hidden
+      />
+      <div className="wrap relative flex h-10 items-center gap-5 text-[0.8125rem] font-medium">
+        <p className="hidden shrink-0 items-center gap-2.5 text-white/85 md:flex">
+          <span className="live-dot" aria-hidden />
+          <Countdown />
+        </p>
+        <span className="hidden h-4 w-px shrink-0 bg-white/20 md:block" aria-hidden />
+        <div
+          className="group relative flex-1 overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]"
+          aria-label="Store highlights"
+        >
+          <div className="flex w-max animate-[ticker_32s_linear_infinite] items-center group-hover:[animation-play-state:paused]">
+            {items.map(({ Icon, text }, i) => (
+              <span key={i} className="flex items-center whitespace-nowrap" aria-hidden={i >= trust.length}>
+                <Icon className="mr-2 h-4 w-4 text-accent" />
+                <span className="text-white/90">{text}</span>
+                <SparkIcon className="mx-6 h-2.5 w-2.5 text-white/30" />
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

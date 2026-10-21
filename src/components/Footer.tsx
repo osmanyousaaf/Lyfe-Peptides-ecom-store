@@ -1,6 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ClockIcon, MailIcon, MapleIcon } from "./icons";
+import { getSettings } from "@/lib/settings";
+import { ClockIcon, FacebookIcon, InstagramIcon, MailIcon, MapleIcon, TikTokIcon, YouTubeIcon } from "./icons";
+
+const SOCIAL_ICON = { Instagram: InstagramIcon, Facebook: FacebookIcon, TikTok: TikTokIcon, YouTube: YouTubeIcon };
+const SOCIAL_HOVER = {
+  Instagram: "hover:bg-[linear-gradient(45deg,#f9a03f,#e1306c,#833ab4)]",
+  Facebook: "hover:bg-[#1877f2]",
+  TikTok: "hover:bg-black hover:shadow-[-3px_-3px_0_#25f4ee,3px_3px_0_#fe2c55]",
+  YouTube: "hover:bg-[#ff0000]",
+};
 
 const SHOP = [
   ["All products", "/shop"],
@@ -13,13 +22,16 @@ const SHOP = [
 const COMPANY = [
   ["About us", "/about"],
   ["Documentation", "/documentation"],
+  ["Blog", "/blog"],
   ["Contact", "/contact"],
   ["Cart", "/cart"],
 ];
 
 export default function Footer() {
+  const site = getSettings();
   return (
-    <footer className="bg-navy-2 text-white/80">
+    <footer className="relative overflow-hidden bg-navy-2 text-white/80">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,var(--accent),transparent)]" aria-hidden />
       <div className="wrap grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.3fr]">
         <div>
           <Link href="/" className="inline-flex items-center gap-2.5 rounded-lg bg-white px-3 py-2">
@@ -36,6 +48,24 @@ export default function Footer() {
           <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-white">
             <MapleIcon className="h-5 w-5 text-[#ff5a4f]" /> Proudly Canadian
           </p>
+          <ul className="mt-6 flex gap-2.5" aria-label="Follow Lyfe Peptides">
+            {site.social.filter((s) => s.href).map(({ name, href }) => {
+              const Icon = SOCIAL_ICON[name];
+              return (
+                <li key={name}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Lyfe Peptides on ${name}`}
+                    className={`grid h-11 w-11 place-items-center rounded-full bg-white/10 text-white transition duration-300 hover:-translate-y-1 hover:scale-105 ${SOCIAL_HOVER[name]}`}
+                  >
+                    <Icon className="h-5 w-5" />
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
         </div>
 
         <nav aria-label="Shop">
@@ -65,13 +95,13 @@ export default function Footer() {
           <ul className="grid gap-3 text-sm">
             <li className="flex items-center gap-2.5">
               <MailIcon className="h-5 w-5 shrink-0 text-accent" />
-              <a href="mailto:info@lyfepeptidescanada.com" className="transition hover:text-white">
-                info@lyfepeptidescanada.com
+              <a href={`mailto:${site.email}`} className="transition hover:text-white">
+                {site.email}
               </a>
             </li>
             <li className="flex items-center gap-2.5">
               <ClockIcon className="h-5 w-5 shrink-0 text-accent" />
-              Monday to Friday, 9 am to 5 pm EST
+              {site.hours}
             </li>
           </ul>
           <p className="mt-5 rounded-lg bg-white/5 p-3 text-xs leading-relaxed">

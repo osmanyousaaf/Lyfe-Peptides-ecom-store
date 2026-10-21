@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import type { Product } from "@/lib/types";
-import { GOALS } from "@/lib/products";
+import { GOALS } from "@/lib/goals";
 import ProductCard from "./ProductCard";
 import { SearchIcon } from "./icons";
 

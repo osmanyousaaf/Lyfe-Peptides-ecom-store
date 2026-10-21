@@ -1,0 +1,31 @@
+/* Contact page. Everything is prefixed contact-. */
+/* layered so Tailwind utilities on the same element still win */
+@layer components {
+  /* FAQ answers slide in; the closed state needs no animation, so nothing shifts on close */
+  .contact-faq[open] .contact-faq-body {
+    animation: contact-open 260ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  @keyframes contact-open {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+  }
+
+  /* the success tick draws itself */
+  .contact-check {
+    stroke-dasharray: 24;
+    animation: contact-draw 500ms 150ms cubic-bezier(0.6, 0, 0.2, 1) both;
+  }
+  @keyframes contact-draw {
+    from {
+      stroke-dashoffset: 24;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  .contact-sent {
+    animation: rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+}

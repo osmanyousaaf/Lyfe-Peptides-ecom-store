@@ -1,0 +1,155 @@
+/* layered so Tailwind utilities on the same element still win */
+@layer components {
+/* Lyfe chat widget: a quiet, classic support panel. Every class and keyframe is prefixed chat-. */
+
+@keyframes chat-pop {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes chat-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes chat-sheet-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes chat-msg-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes chat-dot {
+  0%,
+  80%,
+  100% {
+    opacity: 0.25;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+@keyframes chat-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.chat-launcher {
+  background: var(--navy);
+  box-shadow: 0 12px 28px -12px rgb(13 30 56 / 0.6);
+  transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+.chat-launcher:hover {
+  background: var(--navy-2);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px -14px rgb(13 30 56 / 0.7);
+}
+
+.chat-pop {
+  animation: chat-pop 300ms ease-out both;
+}
+
+.chat-panel {
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 30px 70px -28px rgb(13 30 56 / 0.45);
+  animation: chat-panel-in 240ms ease-out both;
+  transform-origin: bottom right;
+}
+@media (max-width: 639px) {
+  .chat-panel {
+    animation-name: chat-sheet-in;
+    border-radius: 0;
+    border: 0;
+  }
+}
+
+.chat-head {
+  background: var(--navy);
+}
+
+.chat-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(19 41 75 / 0.2) transparent;
+  background: var(--surface);
+}
+
+.chat-msg {
+  animation: chat-msg-in 220ms ease-out both;
+}
+
+.chat-bubble-user {
+  background: var(--navy);
+}
+.chat-bubble-bot {
+  background: #fff;
+  border: 1px solid var(--line);
+}
+.chat-bubble-bot a {
+  color: var(--accent-deep);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.chat-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--muted);
+  animation: chat-dot 1.2s ease-in-out infinite;
+}
+.chat-dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.chat-dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.chat-caret {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: -0.15em;
+  background: var(--navy);
+  animation: chat-blink 0.9s steps(1) infinite;
+}
+
+.chat-chip {
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.chat-card {
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+.chat-card:hover {
+  border-color: #cfd8e4;
+  box-shadow: 0 8px 20px -16px rgb(19 41 75 / 0.5);
+}
+.chat-card img {
+  mix-blend-mode: multiply;
+}
+}

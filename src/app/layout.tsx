@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import { Caveat, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Providers from "@/components/Providers";
-import { getCategories, productsByCategory } from "@/lib/products";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -34,19 +30,12 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const categories = getCategories().map((name) => ({ name, count: productsByCategory(name).length }));
   return (
     <html lang="en" className={`${jakarta.variable} ${caveat.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
       </head>
-      <body className="min-h-full">
-        <Providers>
-          <Header categories={categories} />
-          <main>{children}</main>
-          <Footer />
-        </Providers>
-      </body>
+      <body className="min-h-full">{children}</body>
     </html>
   );
 }

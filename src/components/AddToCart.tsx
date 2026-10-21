@@ -16,6 +16,7 @@ export default function AddToCart({ product }: { product: Product }) {
   const available = (attr: string, value: string) =>
     product.variants.some(
       (v) =>
+        v.inStock !== false &&
         v.attrs[attr] === value &&
         Object.entries(picked).every(([k, val]) => k === attr || v.attrs[k] === val)
     );
@@ -29,7 +30,8 @@ export default function AddToCart({ product }: { product: Product }) {
 
   const unit = variable ? variant?.priceCents ?? product.priceMin ?? product.priceCents : product.priceCents;
   const ready = !variable || Boolean(variant);
-  const canBuy = ready && product.inStock;
+  const variantOut = variant?.inStock === false;
+  const canBuy = ready && product.inStock && !variantOut;
 
   function addToCart() {
     if (!canBuy) return;
@@ -58,6 +60,9 @@ export default function AddToCart({ product }: { product: Product }) {
           {formatPrice(unit)}
         </span>
         <span className="text-small text-muted">CAD</span>
+        {!variable && product.compareAtCents ? (
+          <span className="text-small font-semibold text-faint line-through">{formatPrice(product.compareAtCents)}</span>
+        ) : null}
       </p>
 
       {variable &&
@@ -74,12 +79,12 @@ export default function AddToCart({ product }: { product: Product }) {
                     disabled={!ok && !on}
                     aria-pressed={on}
                     onClick={() => setPicked((s) => ({ ...s, [attr.name]: opt }))}
-                    className={`min-h-[44px] px-4 text-small transition-colors duration-150 active:translate-y-px ${
+                    className={`min-h-[44px] px-5 text-small transition-all duration-200 active:translate-y-px ${
                       on
-                        ? "rounded-lg border border-navy bg-navy text-white"
+                        ? "rounded-full border border-navy bg-navy font-semibold text-white shadow-[0_8px_18px_-10px_rgb(19_41_75/0.9)]"
                         : ok
-                          ? "rounded-lg border border-line bg-white text-ink hover:border-navy"
-                          : "cursor-not-allowed rounded-lg border border-line bg-surface text-faint line-through"
+                          ? "rounded-full border border-line bg-white font-semibold text-ink hover:border-navy"
+                          : "cursor-not-allowed rounded-full border border-line bg-surface text-faint line-through"
                     }`}
                   >
                     {opt}
@@ -92,10 +97,10 @@ export default function AddToCart({ product }: { product: Product }) {
 
       <div className="flex items-stretch gap-3">
         <Stepper qty={qty} dec={() => setQty((q) => Math.max(1, q - 1))} inc={() => setQty((q) => q + 1)} />
-        <button onClick={addToCart} disabled={!canBuy} className="btn btn-solid flex-1">
+        <button onClick={addToCart} disabled={!canBuy} className="btn btn-solid shine flex-1 rounded-full">
           {added
             ? "Added to cart"
-            : !product.inStock
+            : !product.inStock || variantOut
               ? "Sold out"
               : !ready
                 ? `Choose ${product.attributes.map((a) => a.name.toLowerCase()).join(" and ")}`

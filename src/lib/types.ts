@@ -3,6 +3,10 @@ export type Variant = {
   priceCents: number;
   attrs: Record<string, string>;
   label: string;
+  /** units on hand; null means stock isn't tracked */
+  stock?: number | null;
+  inStock?: boolean;
+  sku?: string | null;
 };
 
 export type Attribute = {
@@ -29,6 +33,17 @@ export type Product = {
   priceMax?: number;
   variants: Variant[];
   attributes: Attribute[];
+  /** units on hand for simple products; null means stock isn't tracked */
+  stock?: number | null;
+  lowStockAt?: number;
+  sku?: string | null;
+  compareAtCents?: number | null;
+  status?: "published" | "draft";
+  /** position on the landing page, 0 when not featured */
+  featured?: number;
+  sort?: number;
+  createdAt?: string;
+  updatedAt?: string;
 };
 
 export type CartLine = {

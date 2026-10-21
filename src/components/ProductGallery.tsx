@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { isUpload } from "@/lib/img";
 import { useState } from "react";
 
 export default function ProductGallery({ images, name }: { images: string[]; name: string }) {
@@ -15,6 +16,7 @@ export default function ProductGallery({ images, name }: { images: string[]; nam
           alt={name}
           fill
           priority
+          unoptimized={isUpload(images[active])}
           sizes="(max-width: 768px) 100vw, 640px"
           className="rise object-cover"
         />
@@ -30,7 +32,7 @@ export default function ProductGallery({ images, name }: { images: string[]; nam
               className="exhibit relative aspect-[4/5] w-20 transition-opacity duration-200"
               style={{ opacity: i === active ? 1 : 0.5 }}
             >
-              <Image src={src} alt="" fill sizes="80px" className="object-cover" />
+              <Image src={src} alt="" fill sizes="80px" unoptimized={isUpload(src)} className="object-cover" />
             </button>
           ))}
         </div>

@@ -1,0 +1,184 @@
+/* Accounts: sign-in prompt, account button, ticket and celebration. Every class/keyframe starts with acct-.
+   Layered so Tailwind utilities on the same element still win. */
+@layer components {
+  @keyframes acct-sheet-up {
+    from {
+      transform: translateY(105%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  @keyframes acct-pop {
+    from {
+      opacity: 0;
+      transform: translateY(18px) scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes acct-fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes acct-orbit {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes acct-breathe {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.55;
+    }
+    50% {
+      transform: scale(1.08);
+      opacity: 0.9;
+    }
+  }
+  @keyframes acct-shimmer {
+    0% {
+      transform: translateX(-130%) skewX(-18deg);
+    }
+    55%,
+    100% {
+      transform: translateX(330%) skewX(-18deg);
+    }
+  }
+  @keyframes acct-menu {
+    from {
+      opacity: 0;
+      transform: translateY(-6px) scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes acct-confetti {
+    0% {
+      transform: translate3d(0, -20px, 0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translate3d(var(--dx, 0px), 110vh, 0) rotate(var(--rot, 540deg));
+      opacity: 0.9;
+    }
+  }
+  @keyframes acct-ticket-in {
+    0% {
+      opacity: 0;
+      transform: perspective(900px) rotateX(55deg) translateY(30px) scale(0.92);
+    }
+    60% {
+      opacity: 1;
+      transform: perspective(900px) rotateX(-6deg) translateY(-4px) scale(1.01);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes acct-stamp {
+    0% {
+      opacity: 0;
+      transform: rotate(-14deg) scale(1.8);
+    }
+    70% {
+      opacity: 1;
+      transform: rotate(-14deg) scale(0.92);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(-14deg) scale(1);
+    }
+  }
+
+  .acct-backdrop {
+    animation: acct-fade 300ms ease both;
+  }
+  .acct-sheet {
+    animation: acct-sheet-up 520ms cubic-bezier(0.2, 0.9, 0.25, 1) both;
+  }
+  @media (min-width: 640px) {
+    .acct-sheet {
+      animation: acct-pop 520ms cubic-bezier(0.2, 0.9, 0.25, 1) both;
+    }
+  }
+  .acct-pop {
+    animation: acct-pop 480ms cubic-bezier(0.2, 0.9, 0.25, 1) both;
+  }
+  .acct-menu {
+    animation: acct-menu 180ms cubic-bezier(0.2, 0.9, 0.25, 1) both;
+    transform-origin: top right;
+  }
+  .acct-orbit {
+    animation: acct-orbit 18s linear infinite;
+  }
+  .acct-orbit-rev {
+    animation: acct-orbit 26s linear infinite reverse;
+  }
+  .acct-breathe {
+    animation: acct-breathe 4.5s ease-in-out infinite;
+  }
+  .acct-shimmer {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .acct-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 35%;
+    background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.45), transparent);
+    transform: translateX(-130%) skewX(-18deg);
+    animation: acct-shimmer 3.4s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .acct-ticket-in {
+    animation: acct-ticket-in 900ms cubic-bezier(0.2, 0.9, 0.25, 1) 200ms both;
+  }
+  .acct-stamp {
+    animation: acct-stamp 600ms cubic-bezier(0.2, 0.9, 0.25, 1.3) 1000ms both;
+  }
+  .acct-confetti {
+    position: absolute;
+    top: 0;
+    width: 9px;
+    height: 14px;
+    border-radius: 2px;
+    animation: acct-confetti var(--dur, 3.2s) cubic-bezier(0.25, 0.4, 0.5, 1) var(--delay, 0s) forwards;
+  }
+
+  /* ticket notches cut from both sides */
+  .acct-ticket {
+    --notch: 14px;
+    mask: radial-gradient(circle var(--notch) at 0 50%, transparent 98%, #000) left / 51% 100% no-repeat,
+      radial-gradient(circle var(--notch) at 100% 50%, transparent 98%, #000) right / 51% 100% no-repeat;
+    -webkit-mask: radial-gradient(circle var(--notch) at 0 50%, transparent 98%, #000) left / 51% 100% no-repeat,
+      radial-gradient(circle var(--notch) at 100% 50%, transparent 98%, #000) right / 51% 100% no-repeat;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .acct-confetti,
+    .acct-shimmer::after {
+      display: none;
+    }
+    .acct-sheet,
+    .acct-pop,
+    .acct-ticket-in,
+    .acct-stamp {
+      animation: none;
+      opacity: 1;
+    }
+  }
+}
