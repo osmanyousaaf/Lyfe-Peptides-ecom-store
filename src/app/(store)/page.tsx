@@ -5,6 +5,11 @@ import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import Newsletter from "@/components/Newsletter";
 import WhyLyfe from "@/components/WhyLyfe";
+import Tested from "@/components/home/Tested";
+import Guarantee from "@/components/home/Guarantee";
+import HowItWorks from "@/components/home/HowItWorks";
+import ClosingCta from "@/components/home/ClosingCta";
+import Faq from "@/components/contact/Faq";
 import {
   ArrowRight,
   BoxIcon,
@@ -173,73 +178,9 @@ export default function Home() {
 
       <WhyLyfe compounds={all.length} />
 
-      {/* lab verified */}
-      <section id="lab-verified" className="relative scroll-mt-32 overflow-hidden bg-navy text-white">
-        <div className="dot-grid-light pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_75%_50%,#000,transparent_70%)]" aria-hidden />
-        <span className="orb right-[10%] top-[20%] h-80 w-80 bg-accent/25" aria-hidden />
-        <span className="orb bottom-0 right-[40%] h-72 w-72 bg-[#4f7bd9]/30 [animation-delay:-6s]" aria-hidden />
-        <div className="wrap section relative grid items-center gap-12 lg:grid-cols-2">
-          <div>
-            <p className="eyebrow text-white" data-reveal>Lab-verified purity</p>
-            <h2 className="head mt-4 max-w-[18ch]" data-reveal style={{ ["--d" as string]: "60ms" }}>
-              Every batch tested. Every result documented.
-            </h2>
-            <p className="mt-4 max-w-[52ch] text-white/75" data-reveal style={{ ["--d" as string]: "120ms" }}>
-              Nothing ships on trust alone. Each lot is analysed before it is listed, and its certificate of
-              analysis comes with your order.
-            </p>
-            <ul className="mt-7 grid gap-3">
-              {[
-                "HPLC testing for purity and concentration",
-                "Mass spectrometry to confirm identity",
-                "USP-grade, low-endotoxin, low-metal excipients",
-                "Batch-specific certificate of analysis with every order",
-              ].map((t, i) => (
-                <li
-                  key={t}
-                  className="group flex items-center gap-3 rounded-xl border border-white/0 px-3 py-2 transition hover:border-white/10 hover:bg-white/5"
-                  data-reveal
-                  style={{ ["--d" as string]: `${180 + i * 90}ms` }}
-                >
-                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-accent shadow-[0_0_0_4px_rgb(242_106_33/0.2)] transition group-hover:scale-110">
-                    <CheckIcon className="h-3.5 w-3.5" />
-                  </span>
-                  {t}
-                </li>
-              ))}
-            </ul>
-            <Link href="/documentation" className="btn btn-solid shine group mt-8" data-reveal style={{ ["--d" as string]: "540ms" }}>
-              See how we test <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </div>
+      <Tested />
 
-          <div className="relative" data-reveal style={{ ["--d" as string]: "100ms" }}>
-            <div className="grid grid-cols-3 gap-3 sm:gap-5">
-              {["semax-10-mg", "nad-500-mg", "ss-31-10-mg"].map((s, i) => {
-                const p = getProduct(s);
-                return p ? (
-                  <Link
-                    key={s}
-                    href={`/product/${p.slug}`}
-                    className={`group block ${i === 1 ? "-translate-y-8" : "translate-y-4"}`}
-                    aria-label={p.name}
-                  >
-                    <div
-                      className="float exhibit relative aspect-[3/5] rounded-2xl shadow-[0_30px_60px_-30px_rgb(0_0_0/0.6)] ring-1 ring-white/10 transition duration-500 group-hover:-translate-y-2"
-                      style={{ animationDelay: `${-i * 1.3}s` }}
-                    >
-                      <Image src={p.image} alt="" fill unoptimized={isUpload(p.image)} sizes="(max-width: 1024px) 30vw, 200px" className="scale-[1.35] object-cover transition-transform duration-700 group-hover:scale-[1.45]" />
-                      <span className="scanline" style={{ animationDelay: `${i * 1.1}s` }} aria-hidden />
-                    </div>
-                    <span className="mt-3 block text-center text-xs font-semibold text-white/60 transition group-hover:text-white">{p.name}</span>
-                  </Link>
-                ) : null;
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <Guarantee />
 
       {/* 28 day supply */}
       <section className="wrap section">
@@ -288,6 +229,32 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <HowItWorks />
+
+      {/* questions */}
+      <section className="wrap section">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.5fr]">
+          <div data-reveal>
+            <p className="eyebrow">Questions</p>
+            <h2 className="mt-4 text-[clamp(2rem,1.4rem+2.4vw,3.25rem)] font-extrabold leading-[1.05] tracking-[-0.03em] text-navy">
+              Frequently asked questions
+            </h2>
+            <p className="mt-4 max-w-[36ch] text-muted">
+              Still have a question about testing, shipping or documentation? We answer every message within a
+              business day.
+            </p>
+            <Link href="/contact" className="btn btn-line mt-6">
+              Contact us
+            </Link>
+          </div>
+          <div data-reveal style={{ ["--d" as string]: "100ms" }}>
+            <Faq />
+          </div>
+        </div>
+      </section>
+
+      <ClosingCta />
 
       <Newsletter />
     </>

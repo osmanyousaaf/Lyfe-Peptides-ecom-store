@@ -1,16 +1,7 @@
 /* Contact page. Everything is prefixed contact-. */
 /* layered so Tailwind utilities on the same element still win */
 @layer components {
-  /* FAQ answers slide in; the closed state needs no animation, so nothing shifts on close */
-  .contact-faq[open] .contact-faq-body {
-    animation: contact-open 260ms cubic-bezier(0.2, 0.7, 0.2, 1);
-  }
-  @keyframes contact-open {
-    from {
-      opacity: 0;
-      transform: translateY(-6px);
-    }
-  }
+  /* the FAQ accordion animation lives in globals.css, since the home page uses it too */
 
   /* the success tick draws itself */
   .contact-check {

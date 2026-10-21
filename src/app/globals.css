@@ -388,32 +388,66 @@
   animation: hue-pan 6s linear infinite;
 }
 
-/* vertical laser sweep over lab imagery */
-@keyframes scan {
+/* lab scan: one crisp pass over each vial when its section is revealed,
+   then a "verified" badge stamps on */
+@keyframes scan-pass {
   0% {
-    top: -10%;
+    transform: translateY(-100%);
     opacity: 0;
   }
-  10% {
+  12% {
     opacity: 1;
   }
-  90% {
+  88% {
     opacity: 1;
   }
   100% {
-    top: 105%;
+    transform: translateY(100%);
     opacity: 0;
   }
 }
 .scanline {
   position: absolute;
-  left: 0;
-  right: 0;
-  height: 36px;
-  background: linear-gradient(180deg, transparent, rgb(242 106 33 / 0.28) 70%, rgb(255 180 120 / 0.9) 96%, transparent);
-  opacity: 0;
-  animation: scan 3.8s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  inset: 0;
   pointer-events: none;
+  opacity: 0;
+  transform: translateY(-100%);
+  /* a crisp blue scanner line with a very short, faint trail above it */
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 92%,
+    rgb(56 152 255 / 0.07) 97%,
+    rgb(56 152 255 / 0.95) 99.3%,
+    transparent 100%
+  );
+}
+.in .scanline {
+  animation: scan-pass 1.5s cubic-bezier(0.65, 0, 0.35, 1) var(--scan-d, 0ms) both;
+}
+
+@keyframes stamp {
+  0% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.85);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.verified-badge {
+  opacity: 0;
+}
+.in .verified-badge {
+  animation: stamp 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) calc(var(--scan-d, 0ms) + 1.35s) both;
+}
+.js [data-reveal]:not(.in) .verified-badge {
+  animation: stamp 0.01s linear 3s forwards;
 }
 
 /* SVG strokes that draw themselves once revealed */
@@ -693,5 +727,24 @@
   }
   .scanline {
     display: none;
+  }
+  .verified-badge {
+    opacity: 1;
+  }
+}
+
+/* studio product shot: an ice-blue light pool that the vial render is multiplied onto */
+.studio {
+  background: radial-gradient(ellipse 80% 70% at 50% 30%, #ffffff 0%, #e8f2ff 28%, #b3d4f7 62%, #6aa6e9 100%);
+}
+
+/* FAQ accordion answers slide in (shared by the contact page and the home page) */
+.contact-faq[open] .contact-faq-body {
+  animation: contact-open 260ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+@keyframes contact-open {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
   }
 }

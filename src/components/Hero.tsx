@@ -1,143 +1,89 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BoltIcon, FlaskIcon, MapleIcon, ShieldIcon, TruckIcon } from "./icons";
-
-const FEATURES = [
-  { Icon: ShieldIcon, title: "COA included", sub: "With every order" },
-  { Icon: FlaskIcon, title: "99%+ purity", sub: "Third-party verified" },
-  { Icon: TruckIcon, title: "Free shipping", sub: "On orders over $300" },
-  { Icon: BoltIcon, title: "Same-day dispatch", sub: "Orders before 1 PM EST" },
-];
+import Studio from "./Studio";
+import { ArrowRight, CheckIcon, MapleIcon } from "./icons";
 
 // the first entry repeats at the end so the roll loops without a jump
 const PROVINCES = ["Ontario", "British Columbia", "Alberta", "Quebec", "Nova Scotia", "Ontario"];
 
-// A vial render, cropped to the vial and multiplied onto the hero so its white ground disappears.
-// The blend sits on the outermost layer: transformed children start their own stacking context.
-function Vial({ src, alt, className, delay, depth }: { src: string; alt: string; className: string; delay: string; depth: string }) {
-  return (
-    <div className={`px-layer blend absolute ${className}`} style={{ ["--depth" as string]: depth }}>
-      <div className="float relative aspect-[1/2] h-full overflow-hidden" style={{ animationDelay: delay }}>
-        <Image src={src} alt={alt} fill priority sizes="(max-width: 1024px) 40vw, 300px" className="scale-[1.62] object-cover" />
-      </div>
-    </div>
-  );
-}
+const STATS = [
+  { v: "≥ 99%", l: "Verified purity, by HPLC" },
+  { v: "100%", l: "Batch-specific COAs" },
+  { v: "1 PM", l: "Same-day dispatch cut-off, EST" },
+  { v: "13", l: "Compounds in dual chamber pens" },
+];
 
 export default function Hero() {
   return (
-    <section data-parallax className="relative overflow-hidden bg-[linear-gradient(115deg,#f7f9fc_0%,#eef3f9_45%,#e3eaf4_100%)]">
-      {/* drifting colour and a faint lab grid */}
-      <div className="dot-grid pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_70%_40%,#000_10%,transparent_70%)]" aria-hidden />
-      <span className="orb right-[8%] top-[6%] h-72 w-72 bg-accent/25" aria-hidden />
-      <span className="orb bottom-[-10%] right-[30%] h-80 w-80 bg-[#7aa2e3]/30 [animation-delay:-5s]" aria-hidden />
-      <span className="orb left-[-6%] top-[30%] h-64 w-64 bg-[#e04e8b]/10 [animation-delay:-9s]" aria-hidden />
+    <section data-parallax className="relative overflow-hidden bg-[#0b1a36] text-white">
+      {/* studio backdrop: a cool pool of light, a warm rim, and the wordmark set into the wall */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_72%_42%,#1f4b8f_0%,#122c5c_40%,#0b1a36_75%)]" aria-hidden />
+      <span className="orb left-[-8%] top-[20%] h-[420px] w-[420px] bg-[#2d6fd6]/35" aria-hidden />
+      <span className="orb bottom-[-20%] right-[-4%] h-[460px] w-[460px] bg-accent/25 [animation-delay:-7s]" aria-hidden />
+      <div className="dot-grid-light pointer-events-none absolute inset-0 opacity-60 [mask-image:radial-gradient(ellipse_at_50%_40%,#000_0%,transparent_70%)]" aria-hidden />
+      <span
+        className="px-layer pointer-events-none absolute left-1/2 top-[2%] select-none whitespace-nowrap text-[26vw] font-extrabold leading-none tracking-[-0.06em] text-white/[0.035] [-webkit-text-stroke:1px_rgb(255_255_255/0.08)] lg:left-auto lg:right-[-2%] lg:top-[6%] lg:text-[17vw]"
+        style={{ ["--depth" as string]: "-10px" }}
+        aria-hidden
+      >
+        LYFE
+      </span>
 
-      <div className="wrap relative grid items-center gap-10 py-12 lg:grid-cols-[1.05fr_1fr] lg:py-16">
+      <div className="wrap relative grid items-center gap-12 pb-14 pt-12 lg:grid-cols-[1.05fr_1fr] lg:pb-20 lg:pt-20">
         <div>
-          <Link href="/documentation#dual-chamber" className="rise group inline-flex items-center gap-2 rounded-full border border-navy/10 bg-white/70 py-1.5 pl-1.5 pr-4 text-[0.8125rem] font-semibold text-navy shadow-sm backdrop-blur transition hover:border-accent/40 hover:bg-white">
-            <span className="rounded-full bg-navy px-2.5 py-0.5 text-[0.6875rem] font-bold uppercase tracking-wider text-white">New</span>
-            Dual chamber pens, made in Canada
-            <ArrowRight className="h-3.5 w-3.5 text-accent transition-transform group-hover:translate-x-0.5" />
-          </Link>
-          <h1 className="display rise mt-5 max-w-[15ch] text-navy" style={{ animationDelay: "60ms" }}>
-            Your Canadian Source for{" "}
-            <span className="relative inline-block">
-              <span className="grad-text">Research Peptides</span>
-              <svg viewBox="0 0 300 14" preserveAspectRatio="none" className="absolute -bottom-2 left-0 h-3 w-full" aria-hidden>
-                <path
-                  d="M3 10 C 80 2, 200 2, 297 8"
-                  fill="none"
-                  stroke="var(--accent)"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  className="draw in"
-                  style={{ ["--len" as string]: 320, ["--d" as string]: "500ms" }}
-                />
-              </svg>
+          <p className="rise inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/[0.06] py-1.5 pl-2 pr-4 text-[0.8125rem] font-semibold text-white/85 backdrop-blur">
+            <span className="grid h-6 w-6 place-items-center rounded-full bg-[#e2382f] text-white">
+              <MapleIcon className="h-3.5 w-3.5" />
             </span>
+            Canada-based · Research use only
+          </p>
+          <h1 className="rise mt-6 text-[clamp(2.5rem,1.6rem+3.6vw,4.75rem)] font-extrabold leading-[1.02] tracking-[-0.035em]" style={{ animationDelay: "60ms" }}>
+            High-purity research peptides, made in Canada.
           </h1>
-          <p className="rise mt-6 max-w-[52ch] text-[1.0625rem] leading-relaxed text-muted" style={{ animationDelay: "120ms" }}>
-            Lyfe is a Canadian manufacturer and supplier of research-grade peptides. Trusted
-            quality, verified purity and fast delivery, so you can focus on your research.
+          <p className="rise mt-6 max-w-[50ch] text-[1.0625rem] leading-relaxed text-white/75 sm:text-lg" style={{ animationDelay: "120ms" }}>
+            Every batch is tested by HPLC and mass spectrometry, documented in a certificate of analysis, and
+            dispatched the same day from inside Canada.
           </p>
           <div className="rise mt-8 flex flex-wrap gap-3" style={{ animationDelay: "180ms" }}>
             <Link href="/shop" className="btn btn-solid shine group">
-              Shop now <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              Shop peptides <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href="/about" className="btn btn-line">
-              Learn more
+            <Link href="/documentation" className="btn border-white/25 bg-white/[0.06] text-white backdrop-blur hover:border-white/50 hover:bg-white/10">
+              How we test
             </Link>
           </div>
-
-          <ul className="mt-10 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-4 sm:gap-x-4">
-            {FEATURES.map(({ Icon, title, sub }, i) => (
-              <li key={title} className="rise group flex items-start gap-3" style={{ animationDelay: `${260 + i * 70}ms` }}>
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-white text-navy shadow-[0_4px_14px_-6px_rgb(19_41_75/0.35)] transition duration-300 group-hover:-translate-y-0.5 group-hover:bg-navy group-hover:text-white">
-                  <Icon className="h-5 w-5" />
-                </span>
-                <span className="leading-tight">
-                  <span className="block text-sm font-bold text-navy">{title}</span>
-                  <span className="mt-0.5 block text-xs text-muted">{sub}</span>
-                </span>
+          <ul className="rise mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/70" style={{ animationDelay: "240ms" }}>
+            {["COA with every order", "Free shipping over $300", "Discreet packaging"].map((t) => (
+              <li key={t} className="flex items-center gap-2">
+                <CheckIcon className="h-4 w-4 text-accent" />
+                {t}
               </li>
             ))}
           </ul>
         </div>
 
-        {/* three vials on a glowing plinth, drifting with the pointer */}
-        <div className="relative h-[340px] sm:h-[420px] lg:h-[480px]">
-          <div className="px-layer absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" style={{ ["--depth" as string]: "-8px" }} aria-hidden>
-            <svg viewBox="0 0 400 400" className="spin-slow h-[300px] w-[300px] sm:h-[400px] sm:w-[400px]">
-              <circle cx="200" cy="200" r="190" fill="none" stroke="rgb(19 41 75 / 0.12)" strokeDasharray="2 10" strokeWidth="2" />
-              <circle cx="200" cy="200" r="150" fill="none" stroke="rgb(242 106 33 / 0.25)" strokeDasharray="60 340" strokeWidth="2.5" strokeLinecap="round" />
-              <circle cx="200" cy="10" r="5" fill="var(--accent)" />
-            </svg>
+        {/* three staged vials, drifting with the pointer */}
+        <div className="relative mx-auto h-[380px] w-full max-w-[560px] sm:h-[460px] lg:h-[520px]">
+          <div className="px-layer absolute bottom-8 left-[-5%] w-[42%] -rotate-[10deg] sm:left-[-2%]" style={{ ["--depth" as string]: "12px" }}>
+            <Studio src="/products/tb-500-10mg.png" alt="TB-500 10 mg vial" caption="TB-500" className="aspect-[3/4]" priority />
           </div>
-          <span className="absolute bottom-3 left-1/2 h-10 w-[70%] -translate-x-1/2 rounded-[50%] bg-navy/15 blur-xl" aria-hidden />
-
-          <Vial
-            src="/products/tb-500-10mg.png"
-            alt="TB-500 10 mg vial"
-            className="bottom-6 left-[6%] h-[72%] sm:left-[12%] lg:left-[4%]"
-            delay="0s"
-            depth="14px"
-          />
-          <Vial
-            src="/products/lyfe-ghk-cu-100mg.png"
-            alt="GHK-Cu 100 mg vial"
-            className="bottom-6 right-[6%] h-[72%] sm:right-[12%] lg:right-[18%]"
-            delay="-1.6s"
-            depth="18px"
-          />
-          <Vial
-            src="/products/bpc-157-10mg.png"
-            alt="BPC-157 10 mg vial"
-            className="bottom-2 left-1/2 h-[90%] -translate-x-[62%] lg:-translate-x-[78%]"
-            delay="-0.8s"
-            depth="26px"
-          />
-
-          <p className="px-layer absolute right-0 top-2 hidden -rotate-[8deg] font-[family-name:var(--font-caveat)] text-[2.4rem] leading-[0.95] text-navy xl:block" style={{ ["--depth" as string]: "-14px" }}>
-            Quality
-            <br />
-            you can trust
-            <svg viewBox="0 0 160 18" className="mt-1 h-4 w-40" aria-hidden>
-              <path d="M2 14 C 40 4, 100 2, 158 6" fill="none" stroke="var(--accent)" strokeWidth="3.5" strokeLinecap="round" className="draw in" style={{ ["--len" as string]: 170, ["--d" as string]: "900ms" }} />
-            </svg>
-          </p>
+          <div className="px-layer absolute bottom-8 right-[-5%] w-[42%] rotate-[10deg] sm:right-[-2%]" style={{ ["--depth" as string]: "16px" }}>
+            <Studio src="/products/lyfe-ghk-cu-100mg.png" alt="GHK-Cu 100 mg vial" caption="GHK-Cu" className="aspect-[3/4]" priority />
+          </div>
+          <div className="px-layer absolute bottom-0 left-1/2 w-[46%] -translate-x-1/2" style={{ ["--depth" as string]: "26px" }}>
+            <Studio src="/products/bpc-157-10mg.png" alt="BPC-157 10 mg vial" caption="BPC-157 · 10 mg" className="aspect-[3/4]" priority />
+          </div>
 
           {/* where today's orders are headed */}
-          <div className="rise absolute bottom-3 right-0 sm:bottom-8" style={{ animationDelay: "500ms" }}>
-            <div className="flex items-center gap-3 rounded-2xl border border-white/60 bg-white/75 py-2.5 pl-2.5 pr-4 shadow-[0_18px_40px_-20px_rgb(19_41_75/0.55)] backdrop-blur-md">
-              <span className="relative grid h-10 w-10 place-items-center rounded-xl bg-[linear-gradient(135deg,#e2382f,#b81f18)] text-white">
+          <div className="rise absolute -top-2 right-0 sm:top-2" style={{ animationDelay: "500ms" }}>
+            <div className="flex items-center gap-3 rounded-2xl border border-white/15 bg-white/[0.08] py-2.5 pl-2.5 pr-4 shadow-[0_18px_40px_-20px_rgb(0_0_0/0.6)] backdrop-blur-md">
+              <span className="grid h-10 w-10 place-items-center rounded-xl bg-[linear-gradient(135deg,#e2382f,#b81f18)] text-white">
                 <MapleIcon className="h-5 w-5" />
               </span>
               <span className="leading-tight">
-                <span className="flex items-center gap-1.5 text-[0.6875rem] font-bold uppercase tracking-wider text-muted">
+                <span className="flex items-center gap-1.5 text-[0.6875rem] font-bold uppercase tracking-wider text-white/60">
                   <span className="live-dot" aria-hidden /> Shipping today to
                 </span>
-                <span className="roller mt-0.5 text-[0.9375rem] font-extrabold text-navy" aria-label="Every province in Canada">
+                <span className="roller mt-0.5 text-[0.9375rem] font-extrabold text-white" aria-label="Every province in Canada">
                   <span aria-hidden>
                     {PROVINCES.map((p, i) => (
                       <span key={i}>{p}</span>
@@ -148,6 +94,18 @@ export default function Hero() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* the numbers that matter, set into the floor */}
+      <div className="relative border-t border-white/10 bg-[#081430]/70 backdrop-blur">
+        <dl className="wrap grid grid-cols-2 divide-white/10 lg:grid-cols-4 lg:divide-x">
+          {STATS.map(({ v, l }, i) => (
+            <div key={l} className="px-2 py-6 lg:px-8 lg:py-7" data-reveal style={{ ["--d" as string]: `${i * 80}ms` }}>
+              <dd className="num text-[1.75rem] font-extrabold leading-none tracking-tight sm:text-[2.25rem]">{v}</dd>
+              <dt className="mt-2 text-sm text-white/60">{l}</dt>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
   );
