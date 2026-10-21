@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Studio from "@/components/Studio";
+import VialCutout from "@/components/VialCutout";
 import { ArrowRight } from "@/components/icons";
 
 export default function ClosingCta() {
@@ -9,13 +9,11 @@ export default function ClosingCta() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_15%_50%,#1f4b8f_0%,transparent_60%)]" aria-hidden />
         <span className="orb right-[20%] top-[-30%] h-72 w-72 bg-accent/25" aria-hidden />
 
-        <div className="relative mx-auto h-[260px] w-full max-w-[400px] sm:h-[300px]">
-          <div className="absolute bottom-0 left-[6%] w-[48%] -rotate-[8deg]" data-reveal>
-            <Studio src="/products/semax-10mg.png" alt="Semax 10 mg vial" className="aspect-[3/4]" />
-          </div>
-          <div className="absolute bottom-4 right-[6%] w-[48%] rotate-[8deg]" data-reveal style={{ ["--d" as string]: "100ms" }}>
-            <Studio src="/products/lyfe-tesamorelin-10mg.png" alt="Tesamorelin 10 mg vial" className="aspect-[3/4]" />
-          </div>
+        <div className="relative mx-auto h-[280px] w-full max-w-[420px] sm:h-[320px]">
+          <span className="pointer-events-none absolute bottom-[12%] left-1/2 h-6 w-[56%] -translate-x-1/2 rounded-[50%] bg-black/50 blur-lg" aria-hidden />
+          <span className="pointer-events-none absolute left-1/2 top-[6%] h-[72%] w-[68%] -translate-x-1/2 rounded-[50%] bg-[radial-gradient(ellipse_at_center,rgb(120_170_235/0.35)_0%,transparent_68%)] blur-2xl" aria-hidden />
+          <VialCutout src="/products/cut/semax-10mg.png" alt="Semax 10 mg vial" className="bottom-[14%] left-[8%] h-[72%] w-[40%] -rotate-[9deg]" />
+          <VialCutout src="/products/cut/lyfe-tesamorelin-10mg.png" alt="Tesamorelin 10 mg vial" className="bottom-[14%] right-[8%] h-[72%] w-[40%] rotate-[9deg]" />
         </div>
 
         <div className="relative">
