@@ -31,6 +31,26 @@ export const MapleIcon = ({ className }: P) => (
     <rect x="11.4" y="18" width="1.2" height="4" rx="0.6" />
   </svg>
 );
+// The Canadian flag: proper red/white/red bands with a centred maple leaf, not a decorative stand-in.
+export const CanadaFlagIcon = ({ className }: P) => (
+  <svg className={className} viewBox="0 0 36 24" aria-hidden role="img" aria-label="Canada">
+    <defs>
+      <clipPath id="ca-flag-clip">
+        <rect width="36" height="24" rx="3" />
+      </clipPath>
+    </defs>
+    <g clipPath="url(#ca-flag-clip)">
+      <rect width="36" height="24" fill="#fff" />
+      <rect width="9" height="24" fill="#D52B1E" />
+      <rect x="27" width="9" height="24" fill="#D52B1E" />
+      <path
+        fill="#D52B1E"
+        d="M18 5.4l1 2.6 2.3-1.1-.6 2.5 2.4-.4-1.2 2.1 2.2.9-1.9 1.2 1.2 1.8-2.4-.1.3 2.4-2-1.2-.7 2.6h-.8l-.7-2.6-2 1.2.3-2.4-2.4.1 1.2-1.8-1.9-1.2 2.2-.9-1.2-2.1 2.4.4-.6-2.5 2.3 1.1z"
+      />
+      <rect x="17.6" y="16.6" width="0.8" height="2.8" fill="#D52B1E" />
+    </g>
+  </svg>
+);
 export const CartIcon = ({ className }: P) => (
   <svg className={className} viewBox="0 0 24 24" aria-hidden {...s}>
     <path d="M3 4h2l2.3 11a1 1 0 0 0 1 .8h9.4a1 1 0 0 0 1-.8L20.5 8H6" />

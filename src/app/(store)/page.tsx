@@ -10,6 +10,7 @@ import Guarantee from "@/components/home/Guarantee";
 import HowItWorks from "@/components/home/HowItWorks";
 import ClosingCta from "@/components/home/ClosingCta";
 import Faq from "@/components/contact/Faq";
+import DualChamberShipping from "@/components/DualChamberShipping";
 import {
   ArrowRight,
   BoxIcon,
@@ -51,22 +52,29 @@ export default function Home() {
     <>
       <Hero />
 
-      {/* dual chamber banner */}
+      {/* dual chamber banner, with the shipping scene riding alongside the copy */}
       <section className="wrap pt-8 md:pt-10">
-        <div className="flex flex-col gap-5 rounded-2xl border border-line bg-surface px-5 py-5 sm:flex-row sm:items-center sm:px-7">
-          <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-accent text-white">
-            <MapleIcon className="h-6 w-6" />
-          </span>
-          <div className="flex-1">
-            <p className="font-bold text-navy sm:text-[1.0625rem]">
-              Lyfe is the first manufacturer of dual chamber pens in Canada.
-            </p>
-            <p className="mt-0.5 text-sm text-muted">
-              Peptide and bacteriostatic water stay in separate chambers until you activate the pen. No separate
-              reconstitution, no wasted vials.
-            </p>
+        <div className="flex flex-col gap-6 rounded-2xl border border-line bg-surface px-5 py-6 sm:px-7 lg:flex-row lg:items-center lg:gap-10">
+          <div className="flex items-start gap-4 lg:flex-1 lg:items-center">
+            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-accent text-white">
+              <MapleIcon className="h-6 w-6" />
+            </span>
+            <div className="flex-1">
+              <p className="font-bold text-navy sm:text-[1.0625rem]">
+                Lyfe is the first manufacturer of dual chamber pens in Canada.
+              </p>
+              <p className="mt-0.5 text-sm text-muted">
+                Peptide and bacteriostatic water stay in separate chambers until you activate the pen. No separate
+                reconstitution, no wasted vials.
+              </p>
+            </div>
           </div>
-          <Link href="/documentation#dual-chamber" className="btn btn-line btn-sm shrink-0">
+
+          <div className="shrink-0 lg:w-[320px]">
+            <DualChamberShipping />
+          </div>
+
+          <Link href="/documentation#dual-chamber" className="btn btn-line btn-sm shrink-0 self-start lg:self-center">
             Learn about dual chamber <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
