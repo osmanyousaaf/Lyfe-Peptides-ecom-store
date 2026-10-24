@@ -47,3 +47,7 @@ next-env.d.ts
 
 # newsletter sign-ups (personal data, never commit)
 /data/
+
+# local tooling added by the Vercel CLI (not part of the site)
+/.agents/
+/skills-lock.json
