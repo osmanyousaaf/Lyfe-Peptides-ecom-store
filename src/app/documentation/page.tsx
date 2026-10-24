@@ -1,137 +1,193 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Reconstitution from "@/components/Reconstitution";
-import { CheckIcon, FlaskIcon, PenIcon, ShieldIcon } from "@/components/icons";
+import PageHero from "@/components/PageHero";
+import { ArrowRight } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Documentation",
   description:
-    "How Lyfe Peptides verifies purity and identity, how the dual chamber pen works, and a reconstitution calculator.",
+    "Certificates of analysis from Peptide Test Canada, batch traceability, storage guidelines and how Lyfe tests every batch. For research use only.",
 };
 
-const METHODS = [
-  {
-    Icon: FlaskIcon,
-    title: "HPLC purity testing",
-    text: "High-performance liquid chromatography separates every component of the sample. The peptide shows as one tall peak, and its share of the total is the purity.",
-  },
-  {
-    Icon: ShieldIcon,
-    title: "Mass spectrometry",
-    text: "The molecule is weighed by its mass-to-charge ratio. A match with the expected mass confirms the vial holds the peptide on its label.",
-  },
-  {
-    Icon: CheckIcon,
-    title: "USP-grade materials",
-    text: "Excipients are USP-grade, low in endotoxin and low in metals, made from raw materials sourced from GMP facilities.",
-  },
+const PROVIDE = [
+  ["Certificate of analysis", "LC-MS/MS identity, content and purity data for every batch."],
+  ["Batch traceability", "Chain-of-custody documentation from synthesis to delivery."],
+  ["Storage guidelines", "Handling and storage instructions included with every order."],
+  ["Safety data sheets", "Available on request for institutional compliance."],
 ];
 
-const STEPS = [
-  "Let the vial reach room temperature.",
-  "Add bacteriostatic water slowly down the inside wall of the vial, never straight onto the powder.",
-  "Swirl gently until the solution is clear. Do not shake.",
-  "Store refrigerated and use within the window documented for the compound.",
+// Real certificates from Peptide Test Canada (public/coa). Thumbnails are page 1 of each PDF.
+const COAS = [
+  ["bpc-157", "BPC-157"],
+  ["cjc-1295", "CJC-1295"],
+  ["ghk-cu", "GHK-Cu"],
+  ["kpv", "KPV"],
+  ["retatrutide", "Retatrutide"],
+  ["tesamorelin", "Tesamorelin"],
+  ["tb500", "TB-500"],
+  ["glow", "Glow (GHK-Cu + BPC-157 + TB-500)"],
+  ["klow", "Klow (KPV + GHK-Cu + BPC-157 + TB-500)"],
+  ["tb500-bpc157", "TB-500 + BPC-157"],
+];
+
+const METHODS = [
+  [
+    "Liquid chromatography (HPLC)",
+    "Separates every component of the sample. The target peptide shows as one tall peak, and its share of the total peak area is the chromatographic purity.",
+  ],
+  [
+    "Tandem mass spectrometry (MS/MS)",
+    "Identifies the molecule by its mass and fragmentation pattern, confirming the vial holds the peptide on its label, and measures net peptide content.",
+  ],
+  [
+    "USP-grade materials",
+    "Excipients are USP-grade, low in endotoxin and low in metals, with raw materials sourced from GMP manufacturing facilities.",
+  ],
+];
+
+const STORAGE = [
+  ["Unopened, freeze-dried vials", "Keep refrigerated and away from light. Lyophilized peptides stay stable for 12–24 months."],
+  ["After reconstitution", "Keep refrigerated and use within about 28 days. Heat, light and repeated punctures speed up degradation."],
+  ["Only mix what you'll use", "Reconstitute only what your research needs within the month, and keep the rest dry."],
+  ["Dual chamber pens", "Stay dry until activated, so the 28-day clock only starts when you twist the cartridge."],
 ];
 
 export default function DocumentationPage() {
   return (
     <>
-      <div className="border-b border-line bg-surface">
-        <div className="wrap py-10 md:py-14">
-          <p className="eyebrow">Documentation</p>
-          <h1 className="display mt-4 max-w-[20ch] text-navy">How we test, and how to use what you buy</h1>
-          <p className="mt-4 max-w-[60ch] text-muted">
-            Every lot is analysed before it is listed, and its certificate of analysis ships with your order.
-          </p>
-        </div>
-      </div>
+      <PageHero
+        crumb="Documentation"
+        eyebrow="Documentation"
+        title="Transparency,"
+        accent="on paper."
+        lead="At Lyfe, transparency is at the core of everything we do. Every product ships with full documentation, including a certificate of analysis from an independent third-party laboratory."
+      >
+        <nav aria-label="On this page" className="mt-8 flex flex-wrap gap-2">
+          {[
+            ["#certificates", "Certificates"],
+            ["#testing", "How we test"],
+            ["#dual-chamber", "Dual chamber pen"],
+            ["#storage", "Storage"],
+          ].map(([h, l]) => (
+            <a key={h} href={h} className="rounded-full border border-line bg-white px-4 py-2 text-sm font-semibold text-navy transition hover:border-navy">
+              {l}
+            </a>
+          ))}
+        </nav>
+      </PageHero>
 
+      {/* what we provide */}
       <section className="wrap section">
-        <h2 className="head title-bar text-navy">Our testing</h2>
-        <div className="mt-8 grid gap-5 md:grid-cols-3">
-          {METHODS.map(({ Icon, title, text }) => (
-            <div key={title} className="card p-6" data-reveal>
-              <span className="grid h-11 w-11 place-items-center rounded-xl bg-accent/10 text-accent">
-                <Icon className="h-6 w-6" />
-              </span>
-              <h3 className="mt-4 text-lg font-bold text-navy">{title}</h3>
-              <p className="mt-2 text-[0.9375rem] leading-relaxed text-muted">{text}</p>
+        <h2 className="head text-navy">What we provide</h2>
+        <dl className="mt-8 grid overflow-hidden rounded-2xl border border-line bg-white sm:grid-cols-2 lg:grid-cols-4">
+          {PROVIDE.map(([t, d], i) => (
+            <div key={t} className={`p-6 ${i ? "border-t border-line sm:border-t-0 sm:border-l" : ""} ${i === 2 ? "sm:border-l-0 sm:border-t lg:border-l lg:border-t-0" : ""} ${i === 3 ? "sm:border-t lg:border-t-0" : ""}`}>
+              <dt className="num text-xs font-bold text-accent-deep">0{i + 1}</dt>
+              <dd className="mt-2">
+                <span className="block font-bold text-navy">{t}</span>
+                <span className="mt-1 block text-sm leading-relaxed text-muted">{d}</span>
+              </dd>
             </div>
           ))}
+        </dl>
+      </section>
+
+      {/* certificates */}
+      <section id="certificates" className="scroll-mt-32 bg-surface">
+        <div className="wrap section">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 className="head text-navy">Certificates of analysis</h2>
+              <p className="mt-3 max-w-[60ch] text-muted">
+                Independent third-party lab reports from Peptide Test Canada. Open any certificate to read the full PDF.
+              </p>
+            </div>
+          </div>
+          <ul className="mt-10 grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">
+            {COAS.map(([slug, name]) => (
+              <li key={slug}>
+                <a href={`/coa/coa-${slug}.pdf`} target="_blank" rel="noopener noreferrer" className="group block">
+                  <span className="relative block aspect-[935/1210] overflow-hidden rounded-lg bg-white shadow-[0_18px_30px_-20px_rgb(19_41_75/0.45)] ring-1 ring-black/5 transition duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_26px_40px_-22px_rgb(19_41_75/0.55)]">
+                    <Image src={`/coa/coa-${slug}.jpg`} alt={`Certificate of analysis for ${name}, first page`} fill sizes="(max-width: 640px) 45vw, 220px" className="object-cover object-top" />
+                    <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/80 to-transparent px-3 pb-2.5 pt-8 text-xs font-bold text-white opacity-0 transition group-hover:opacity-100">
+                      Open PDF &rarr;
+                    </span>
+                  </span>
+                  <span className="mt-3 block text-sm font-bold leading-snug text-navy">{name}</span>
+                  <span className="text-xs text-muted">Peptide Test Canada · PDF</span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
-      <section id="dual-chamber" className="scroll-mt-36 bg-surface">
-        <div className="wrap section grid items-center gap-10 lg:grid-cols-2">
-          <div className="relative h-[320px] overflow-hidden rounded-2xl bg-white sm:h-[420px]">
-            <Image
-              src="/products/lyfe-pen-v2.png"
-              alt="Lyfe dual chamber pen"
-              fill
-              sizes="(max-width: 1024px) 100vw, 620px"
-              className="blend scale-[1.3] object-cover"
-            />
+      {/* how we test */}
+      <section id="testing" className="wrap section scroll-mt-32 grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+        <div>
+          <h2 className="head text-navy">How we test</h2>
+          <p className="mt-4 max-w-[46ch] text-muted">
+            Our independent testing partners verify the purity, identity and concentration of every batch before it is
+            listed.
+          </p>
+        </div>
+        <ol className="divide-y divide-line border-y border-line">
+          {METHODS.map(([t, d], i) => (
+            <li key={t} className="grid gap-2 py-6 sm:grid-cols-[3rem_1fr]">
+              <span className="num font-serif text-3xl italic text-accent-deep">{i + 1}</span>
+              <div>
+                <h3 className="text-lg font-bold text-navy">{t}</h3>
+                <p className="mt-1.5 leading-relaxed text-muted">{d}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {/* dual chamber pen */}
+      <section id="dual-chamber" className="scroll-mt-32 bg-surface">
+        <div className="wrap section grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="relative h-[420px] overflow-hidden rounded-3xl border border-line bg-[linear-gradient(160deg,#ffffff_0%,#f3f5f8_60%,#e9edf2_100%)] sm:h-[480px]">
+            <span className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/10 blur-[70px]" aria-hidden />
+            <div className="absolute inset-x-6 bottom-8 top-8">
+              <Image src="/cutouts/lyfe-pen-v2.png" alt="Lyfe dual chamber pen" fill sizes="(max-width: 1024px) 90vw, 560px" quality={90} className="object-contain drop-shadow-[0_24px_24px_rgb(19_41_75/0.2)]" />
+            </div>
           </div>
           <div>
             <p className="eyebrow">A Canadian first</p>
             <h2 className="head mt-4 text-navy">The dual chamber pen</h2>
-            <p className="mt-4 max-w-[54ch] text-muted">
-              Lyfe is the first manufacturer of dual chamber pens in Canada. The peptide powder and the
-              bacteriostatic water are sealed in separate chambers. Nothing is mixed until you activate the pen, so
-              there is no separate reconstitution and no partly used vial left over.
+            <p className="mt-4 max-w-[54ch] leading-relaxed text-muted">
+              Lyfe is the first manufacturer of dual chamber pens in Canada. The peptide powder and the diluent are sealed
+              in separate chambers, and nothing is mixed until you activate the pen. The powder stays stable for up to 24
+              months refrigerated, and activation takes under 30 seconds.
             </p>
-            <ul className="mt-6 grid gap-3">
-              {[
-                "Two factory-sealed chambers: powder and bacteriostatic water",
-                "Activate with a twist when you are ready to start",
-                "Sized for a 28-day research cycle, so you only buy what you need",
-                "Offered as a package option on 13 compounds",
-              ].map((t) => (
-                <li key={t} className="flex items-start gap-3">
-                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-accent text-white">
-                    <PenIcon className="h-3.5 w-3.5" />
-                  </span>
-                  {t}
-                </li>
-              ))}
-            </ul>
-            <Link href="/shop" className="btn btn-solid mt-8">
-              Shop products with a pen option
-            </Link>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/dual-chamber-pen-vs-prefilled" className="btn btn-solid">
+                Dual chamber vs. prefilled <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link href="/shop" className="btn btn-line">Shop products</Link>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="wrap section">
-        <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr]">
-          <div>
-            <h2 className="head title-bar text-navy">Reconstituting a vial</h2>
-            <p className="mt-4 max-w-[46ch] text-muted">Four steps for lyophilized powder supplied in a vial.</p>
-          </div>
-          <ol className="grid gap-3">
-            {STEPS.map((s, i) => (
-              <li key={s} className="card flex items-start gap-4 p-5">
-                <span className="num grid h-8 w-8 shrink-0 place-items-center rounded-full bg-navy text-sm font-bold text-white">
-                  {i + 1}
-                </span>
-                <span className="pt-1">{s}</span>
-              </li>
-            ))}
-          </ol>
+      {/* storage */}
+      <section id="storage" className="wrap section scroll-mt-32">
+        <h2 className="head text-navy">Storage and handling</h2>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          {STORAGE.map(([t, d]) => (
+            <div key={t} className="card p-6">
+              <h3 className="font-bold text-navy">{t}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{d}</p>
+            </div>
+          ))}
         </div>
+        <p className="mt-10 rounded-2xl bg-surface p-5 text-sm leading-relaxed text-muted">
+          <strong className="text-navy">For research purposes only.</strong> Not for human consumption. Must be 18+ to
+          purchase. These products are not approved by Health Canada for personal use.
+        </p>
       </section>
-
-      <div className="bg-surface">
-        <Reconstitution />
-      </div>
-
-      <p className="wrap py-10 text-sm text-muted">
-        <strong className="text-ink">For research use only.</strong> This page is general handling information for
-        laboratory reference materials. Products are not for human or animal consumption and are not approved by
-        Health Canada for personal use.
-      </p>
     </>
   );
 }

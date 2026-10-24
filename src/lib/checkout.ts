@@ -1,8 +1,10 @@
 import type { CartLine } from "./types";
+import { track, visitorId } from "@/components/Tracker";
 
 // Sends only what was chosen; the server prices it from the catalog.
 // Returns an error message, or redirects to Stripe.
-export async function startCheckout(lines: CartLine[]): Promise<string | null> {
+export async function startCheckout(lines: CartLine[], code?: string | null): Promise<string | null> {
+  track({ t: "checkout", path: "/checkout" });
   try {
     const res = await fetch("/api/checkout", {
       method: "POST",
@@ -13,6 +15,8 @@ export async function startCheckout(lines: CartLine[]): Promise<string | null> {
           variantId: l.variantId,
           qty: l.qty,
         })),
+        code: code ?? undefined,
+        vid: visitorId(),
       }),
     });
     const data = await res.json();

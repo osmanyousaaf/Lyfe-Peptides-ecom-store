@@ -1,17 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import { useSignup } from "@/lib/promo";
 import { MailIcon } from "./icons";
 
-// No mailing-list service is connected yet, so this opens a pre-written email to the store.
+// Newsletter sign-up: saved through /api/subscribe, and the welcome code is shown and applied.
 export default function Newsletter() {
   const [email, setEmail] = useState("");
+  const { status, message, code, submit: signup } = useSignup("newsletter");
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent("Newsletter sign-up");
-    const body = encodeURIComponent(`Please add ${email} to the Lyfe Peptides newsletter.`);
-    window.location.href = `mailto:info@lyfepeptidescanada.com?subject=${subject}&body=${body}`;
+    signup(email);
   };
 
   return (
@@ -23,10 +23,16 @@ export default function Newsletter() {
               <MailIcon className="h-6 w-6" />
             </span>
             <div>
-              <h2 className="text-2xl font-extrabold">Stay in the loop</h2>
-              <p className="mt-1 text-white/75">New compounds, restocks and research notes. No spam.</p>
+              <h2 className="text-2xl font-extrabold">Stay in the loop, get 10% off</h2>
+              <p className="mt-1 text-white/75">New compounds, restocks and research notes, plus 10% off your first order. No spam.</p>
             </div>
           </div>
+          {status === "done" ? (
+            <p className="rounded-xl bg-white/10 px-5 py-4 text-sm" role="status">
+              You&rsquo;re subscribed. Your code <strong className="num tracking-wider text-accent">{code}</strong> is applied to
+              your cart.
+            </p>
+          ) : (
           <form onSubmit={submit} className="flex flex-col gap-3 sm:flex-row">
             <label className="flex-1">
               <span className="sr-only">Email address</span>
@@ -39,10 +45,12 @@ export default function Newsletter() {
                 className="h-12 w-full rounded-lg border border-white/20 bg-white px-4 text-ink outline-none focus:border-accent"
               />
             </label>
-            <button type="submit" className="btn btn-solid h-12">
-              Subscribe
+            <button type="submit" disabled={status === "busy"} className="btn btn-solid h-12">
+              {status === "busy" ? "Subscribing…" : "Subscribe"}
             </button>
+            {status === "error" && <p className="text-sm text-white/80 sm:basis-full">{message}</p>}
           </form>
+          )}
         </div>
       </div>
     </section>

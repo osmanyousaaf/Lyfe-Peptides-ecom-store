@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 import { getProduct } from "@/lib/products";
+import { findDiscount, type Discount } from "@/lib/discounts";
 
 type IncomingLine = { slug?: unknown; variantId?: unknown; qty?: unknown };
 
@@ -16,9 +17,13 @@ export async function POST(req: Request) {
   }
 
   let incoming: IncomingLine[];
+  let discount: Discount | null = null;
+  let vid: string | undefined;
   try {
     const body = await req.json();
     incoming = body.lines;
+    discount = findDiscount(body.code);
+    if (typeof body.vid === "string" && /^[a-z0-9-]{8,40}$/i.test(body.vid)) vid = body.vid;
   } catch {
     return NextResponse.json({ error: "The order could not be read." }, { status: 400 });
   }
@@ -67,9 +72,21 @@ export async function POST(req: Request) {
   const origin = process.env.NEXT_PUBLIC_SITE_URL || req.headers.get("origin") || "http://localhost:3000";
 
   try {
-    const session = await new Stripe(key).checkout.sessions.create({
+    const stripe = new Stripe(key);
+    // the coupon is created once on Stripe, with the code as its id, then reused
+    let coupon: string | undefined;
+    if (discount) {
+      try {
+        coupon = (await stripe.coupons.retrieve(discount.code)).id;
+      } catch {
+        coupon = (await stripe.coupons.create({ id: discount.code, percent_off: discount.percent, duration: "once", name: discount.label })).id;
+      }
+    }
+    const session = await stripe.checkout.sessions.create({
       mode: "payment",
       line_items,
+      ...(coupon ? { discounts: [{ coupon }] } : {}),
+      ...(vid ? { client_reference_id: vid } : {}),
       shipping_address_collection: { allowed_countries: ["CA"] },
       success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/cart`,

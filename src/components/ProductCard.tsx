@@ -12,11 +12,9 @@ function badge(p: Product): { text: string; tone: string } | null {
 
 export default function ProductCard({ product }: { product: Product }) {
   const b = badge(product);
-  const variable = product.type === "variable";
-  const price = variable ? product.priceMin ?? product.priceCents : product.priceCents;
 
   return (
-    <article className="card card-hover group flex flex-col p-4">
+    <article className="card card-hover group relative flex h-full flex-col overflow-hidden p-4">
       <Link href={`/product/${product.slug}`} className="relative block aspect-square overflow-hidden rounded-lg">
         <Image
           src={product.image}
@@ -37,19 +35,14 @@ export default function ProductCard({ product }: { product: Product }) {
             {product.name}
           </Link>
         </h3>
-        <p className="num mt-1.5 text-[1.0625rem] font-extrabold text-navy">
-          {variable && <span className="mr-1 text-xs font-semibold text-muted">From</span>}
-          {formatPrice(price)}
-        </p>
         <div className="mt-auto pt-4">
           {!product.inStock ? (
-            <Link href={`/product/${product.slug}`} className="btn btn-line btn-sm w-full">
-              View product
-            </Link>
-          ) : variable ? (
-            <Link href={`/product/${product.slug}`} className="btn btn-line btn-sm w-full">
-              Select options
-            </Link>
+            <div className="flex items-end justify-between gap-2">
+              <p className="num text-[1.0625rem] font-extrabold text-faint line-through">{formatPrice(product.priceCents)}</p>
+              <Link href={`/product/${product.slug}`} className="btn btn-line btn-sm">
+                View
+              </Link>
+            </div>
           ) : (
             <QuickAdd product={product} />
           )}

@@ -1,77 +1,82 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import PageHero from "@/components/PageHero";
+import ContactAssistant from "@/components/ContactAssistant";
+import { ArrowRight, ClockIcon, MailIcon, MapleIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Write to Lyfe Peptides. Email answered Monday to Friday, 9 am to 5 pm EST.",
+  description:
+    "Questions about a product, documentation or a bulk order? Email info@lyfepeptidescanada.com, Monday to Friday, 9 am to 5 pm EST.",
 };
+
+const INFO = [
+  { Icon: MailIcon, label: "Email", value: "info@lyfepeptidescanada.com", href: "mailto:info@lyfepeptidescanada.com" },
+  { Icon: ClockIcon, label: "Hours", value: "Monday to Friday, 9 am to 5 pm EST" },
+  { Icon: MapleIcon, label: "Location", value: "Canada, shipping nationwide" },
+];
+
+const FAQ = [
+  ["When will my order ship?", "Orders placed before 1 PM EST ship the same business day, in plain, discreet packaging. Orders over $300 ship free."],
+  ["Can I get the certificate for my batch?", "Every order includes its certificate of analysis. Published certificates are also on the Documentation page."],
+  ["Do you take bulk orders?", "Yes. Choose “Bulk order” in the form with the products and quantities you need, and we'll come back with pricing."],
+  ["Can you advise on use?", "Our products are sold for research purposes only, so we can't advise on personal use. We're happy to help with specs, storage and documentation."],
+];
 
 export default function ContactPage() {
   return (
-    <section className="wrap pb-10 pt-14 md:pt-20">
-      <div className="grid gap-14 md:grid-cols-12 md:gap-x-6">
-        <div className="md:col-span-5">
-          <h1 className="display mb-8">Write to us</h1>
-          <p className="mb-12 max-w-[38ch] text-muted">
-            A question about a compound, an order or a certificate? We are a small Canadian team
-            and we answer every message within a business day.
-          </p>
-          <dl className="flex flex-col gap-6">
-            <div>
-              <dt className="mb-1 text-small text-muted">Email</dt>
-              <dd>
-                <a href="mailto:info@lyfepeptidescanada.com" className="ulink lead">
-                  info@lyfepeptidescanada.com
-                </a>
-              </dd>
+    <>
+      <PageHero
+        crumb="Contact"
+        eyebrow="Contact us"
+        title="We'd love to"
+        accent="hear from you."
+        lead="Have a question about our products, need documentation, or want to place a bulk order? Tell Lyra, our assistant, and a real person on our Canadian team will reply within one business day."
+      />
+
+      <section className="wrap section grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
+        <div>
+          <ul className="grid gap-3">
+            {INFO.map(({ Icon, label, value, href }) => (
+              <li key={label} className="card flex items-center gap-4 p-5">
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-navy text-white">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <span>
+                  <span className="block text-xs font-bold uppercase tracking-wider text-muted">{label}</span>
+                  {href ? (
+                    <a href={href} className="font-semibold text-navy hover:text-accent-deep">{value}</a>
+                  ) : (
+                    <span className="font-semibold text-navy">{value}</span>
+                  )}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-8">
+            <h2 className="text-lg font-extrabold text-navy">Quick answers</h2>
+            <div className="mt-3 divide-y divide-line rounded-2xl border border-line bg-white">
+              {FAQ.map(([q, a]) => (
+                <details key={q} className="group px-5 py-4">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-navy">
+                    {q}
+                    <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-surface text-muted transition group-open:rotate-45" aria-hidden>
+                      +
+                    </span>
+                  </summary>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{a}</p>
+                </details>
+              ))}
             </div>
-            <div>
-              <dt className="mb-1 text-small text-muted">Hours</dt>
-              <dd>Monday to Friday, 9 am to 5 pm EST</dd>
-            </div>
-            <div>
-              <dt className="mb-1 text-small text-muted">Shipping</dt>
-              <dd>Across Canada, same day before 1 PM EST</dd>
-            </div>
-          </dl>
+            <Link href="/documentation" className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-navy hover:text-accent-deep">
+              Browse documentation and certificates <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
 
-        <form
-          className="flex flex-col gap-5 bg-surface p-7 md:col-span-6 md:col-start-7 md:p-10"
-          action="mailto:info@lyfepeptidescanada.com"
-          method="post"
-          encType="text/plain"
-        >
-          <div className="grid gap-5 sm:grid-cols-2">
-            <Field label="Name" name="name" />
-            <Field label="Email" name="email" type="email" />
-          </div>
-          <Field label="Order number, if you have one" name="order" optional />
-          <label className="block">
-            <span className="mb-2 block text-small font-medium">Message</span>
-            <textarea
-              name="message"
-              rows={6}
-              required
-              className="w-full border border-line bg-bg px-3 py-3 text-ink outline-none focus:border-ink"
-            />
-          </label>
-          <button type="submit" className="btn btn-solid self-start">Send message</button>
-        </form>
-      </div>
-    </section>
-  );
-}
-
-function Field({ label, name, type = "text", optional }: { label: string; name: string; type?: string; optional?: boolean }) {
-  return (
-    <label className="block">
-      <span className="mb-2 block text-small font-medium">{label}</span>
-      <input
-        name={name}
-        type={type}
-        required={!optional}
-        className="h-12 w-full border border-line bg-bg px-3 text-ink outline-none focus:border-ink"
-      />
-    </label>
+        <ContactAssistant />
+      </section>
+    </>
   );
 }

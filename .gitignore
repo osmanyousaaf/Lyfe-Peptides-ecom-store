@@ -44,3 +44,6 @@ next-env.d.ts
 .taste-skill/
 .claude/
 !.env.example
+
+# newsletter sign-ups (personal data, never commit)
+/data/

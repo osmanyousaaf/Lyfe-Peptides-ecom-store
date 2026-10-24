@@ -8,6 +8,15 @@ export default function SuccessPage() {
   const { clear } = useCart();
   useEffect(() => {
     clear();
+    // let the server confirm the order with Stripe and record it for the dashboard
+    const id = new URLSearchParams(window.location.search).get("session_id");
+    if (id) {
+      fetch("/api/orders/confirm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sessionId: id }),
+      }).catch(() => {});
+    }
   }, [clear]);
 
   return (

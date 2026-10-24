@@ -1,21 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import Hero from "@/components/Hero";
+import HeroLab from "@/components/HeroLab";
+import LabSection from "@/components/LabReport";
+import WhyCards from "@/components/WhyCards";
+import { DualChamber, TwentyEightDays } from "@/components/PenSections";
 import ProductCard from "@/components/ProductCard";
 import Newsletter from "@/components/Newsletter";
 import {
   ArrowRight,
   BoxIcon,
-  CheckIcon,
   ChevronRight,
-  FlaskIcon,
   GridIcon,
-  LockIcon,
   MapleIcon,
-  PenIcon,
-  ShieldIcon,
   StarIcon,
-  TruckIcon,
   VialIcon,
 } from "@/components/icons";
 import { getAllProducts, getCategories, getProduct, productsByCategory } from "@/lib/products";
@@ -34,35 +32,39 @@ const FEATURED = [
 ];
 
 const CATEGORY_TILES = [
-  { cat: "Recovery", blurb: "Tissue, tendon and gut research", pick: "bpc-157-10-mg" },
-  { cat: "Weight Loss", blurb: "Metabolic and lipolysis models", pick: "aod-9604-10-mg" },
-  { cat: "Anti-Aging", blurb: "Skin, collagen and longevity", pick: "ghk-cu-100-mg" },
-  { cat: "Growth Factors", blurb: "GH axis and secretagogues", pick: "cjc-1295-ipamorelin-10-mg" },
+  { cat: "Recovery", blurb: "BPC-157, TB-500 and peptides for tissue research", img: "/cutouts/bpc-157-10mg.png" },
+  { cat: "Weight Loss", blurb: "AOD-9604 and peptides for metabolic research", img: "/cutouts/lyfe-aod-9604-10mg.png" },
+  { cat: "Anti-Aging", blurb: "GHK-Cu and longevity research compounds", img: "/cutouts/lyfe-ghk-cu-100mg.png" },
+  { cat: "Growth Factors", blurb: "CJC-1295, Ipamorelin and growth research", img: "/cutouts/lyfe-cjc-1295-ipamorelin-10mg.png" },
 ];
 
 const WHY = [
   {
-    Icon: FlaskIcon,
     title: "Third-party tested",
-    text: "Every batch is verified by HPLC and mass spectrometry before it is listed, and the certificate of analysis ships with your order.",
+    text: "Every batch is independently tested by accredited Canadian laboratories. HPLC purity testing confirms you receive exactly what is on the label, and the certificate of analysis ships with your order.",
+    href: "/documentation",
+    cta: "See our testing",
   },
   {
-    Icon: TruckIcon,
     title: "Fast Canadian shipping",
-    text: "Stocked and shipped inside Canada. Orders placed before 1 PM EST leave the same day, and orders over $300 ship free.",
+    text: "Orders placed before 1 PM EST ship the same business day from our Canadian fulfillment centre, in plain, discreet packaging. Orders over $300 ship free.",
+    href: "/shop",
+    cta: "Start an order",
   },
   {
-    Icon: LockIcon,
-    title: "Secure, discreet packaging",
-    text: "Plain outer packaging with no product names, and secure checkout for every order.",
+    title: "Secure & discreet",
+    text: "Plain, unmarked packaging for complete privacy, and a neutral descriptor on your billing statement. Checkout is SSL-encrypted and we never store payment information.",
+    href: "/contact",
+    cta: "Ask us anything",
   },
 ];
 
-export default function Home() {
+// ?hero=lab shows the alternative lab-background hero, for comparing the two designs
+export default async function Home({ searchParams }: { searchParams: Promise<{ hero?: string }> }) {
+  const { hero } = await searchParams;
   const featured = FEATURED.map((s) => getProduct(s)).filter(Boolean) as Product[];
   const all = getAllProducts();
   const cats = getCategories();
-  const pen = "/products/lyfe-pen-v2.png";
 
   const sidebar = [
     { href: "/shop", label: "All products", Icon: GridIcon, count: all.length, active: true },
@@ -77,11 +79,11 @@ export default function Home() {
 
   return (
     <>
-      <Hero />
+      {hero === "lab" ? <HeroLab /> : <Hero />}
 
       {/* dual chamber banner */}
       <section className="wrap pt-8 md:pt-10">
-        <div className="flex flex-col gap-5 rounded-2xl border border-line bg-surface px-5 py-5 sm:flex-row sm:items-center sm:px-7">
+        <div className="flex flex-col gap-5 rounded-2xl border border-line bg-white px-5 py-5 shadow-[0_10px_30px_-22px_rgb(19_41_75/0.4)] sm:flex-row sm:items-center sm:px-7">
           <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-accent text-white">
             <MapleIcon className="h-6 w-6" />
           </span>
@@ -90,13 +92,72 @@ export default function Home() {
               Lyfe is the first manufacturer of dual chamber pens in Canada.
             </p>
             <p className="mt-0.5 text-sm text-muted">
-              Peptide and bacteriostatic water stay in separate chambers until you activate the pen. No separate
-              reconstitution, no wasted vials.
+              See why dual chamber beats prefilled: no premixing, and no 28-day clock until you activate the pen.
             </p>
           </div>
-          <Link href="/documentation#dual-chamber" className="btn btn-line btn-sm shrink-0">
+          <Link href="#dual-chamber" className="btn btn-sm shrink-0 rounded-[10px] border-navy/70 bg-white text-navy hover:bg-navy hover:text-white">
             Learn about dual chamber <ArrowRight className="h-4 w-4" />
           </Link>
+        </div>
+      </section>
+
+      {/* shop by category: intro on the left, four tiles on the right */}
+      <section className="wrap section">
+        <div className="grid items-center gap-10 lg:grid-cols-[0.8fr_2fr] lg:gap-12">
+          <div data-reveal>
+            <p className="eyebrow">Shop by category</p>
+            <h2 className="head mt-4 text-navy">Trusted Peptide Solutions</h2>
+            <p className="mt-4 max-w-[40ch] text-muted">
+              Explore our selection of research peptides, carefully sourced and quality tested for your confidence.
+            </p>
+            <Link href="/shop" className="btn btn-navy mt-7 rounded-[10px]">
+              View All Products <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+            {CATEGORY_TILES.map((t, i) => {
+              const n = productsByCategory(t.cat).length;
+              return (
+                <Link
+                  key={t.cat}
+                  href={`/shop?cat=${encodeURIComponent(t.cat)}`}
+                  className="card card-hover group flex flex-col p-5"
+                  data-reveal
+                  style={{ ["--d" as string]: `${i * 70}ms` }}
+                >
+                  <div className="relative mx-auto h-24 w-full">
+                    <Image src={t.img} alt="" fill sizes="120px" className="object-contain transition-transform duration-500 group-hover:-translate-y-1" />
+                  </div>
+                  <div className="mt-5 flex items-start justify-between gap-2">
+                    <h3 className="text-[0.9375rem] font-bold leading-snug text-navy">{t.cat}</h3>
+                    <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-accent transition-transform group-hover:translate-x-0.5" />
+                  </div>
+                  <p className="mt-1 text-xs text-muted">{t.blurb}</p>
+                  <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-xs font-semibold text-navy">
+                    View {n} products <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* navy brand band with a curved shoulder */}
+      <section className="relative overflow-hidden bg-navy text-white" aria-label="Lyfe Peptides values">
+        <span className="pointer-events-none absolute -right-24 -top-24 h-48 w-80 rounded-full border border-white/10" aria-hidden />
+        <span className="pointer-events-none absolute -left-32 bottom-[-9rem] h-56 w-[30rem] rounded-full border border-white/10" aria-hidden />
+        <div className="wrap flex items-center justify-center gap-4 py-7 sm:gap-6">
+          <span className="hidden h-px w-24 bg-white/20 md:block" aria-hidden />
+          <p className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[0.75rem] font-semibold tracking-[0.25em] text-white/85">
+            {["LYFE PEPTIDES", "RESEARCH", "QUALITY", "TRUST"].map((w, i) => (
+              <span key={w} className="flex items-center gap-5">
+                {i > 0 && <span className="text-accent" aria-hidden>&times;</span>}
+                {w}
+              </span>
+            ))}
+          </p>
+          <span className="hidden h-px w-24 bg-white/20 md:block" aria-hidden />
         </div>
       </section>
 
@@ -159,50 +220,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* shop by category */}
-      <section className="bg-surface">
-        <div className="wrap section">
-          <div className="mb-8 text-center">
-            <h2 className="head text-navy">Shop by category</h2>
-            <p className="mt-3 text-muted">Find compounds by the research area you work in.</p>
-          </div>
-          <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
-            {CATEGORY_TILES.map((t, i) => {
-              const p = getProduct(t.pick);
-              const n = productsByCategory(t.cat).length;
-              return (
-                <Link
-                  key={t.cat}
-                  href={`/shop?cat=${encodeURIComponent(t.cat)}`}
-                  className="card card-hover group flex flex-col overflow-hidden"
-                  data-reveal
-                  style={{ ["--d" as string]: `${i * 70}ms` }}
-                >
-                  <div className="relative aspect-[4/3] bg-white">
-                    {p && (
-                      <Image
-                        src={p.images[p.images.length > 1 ? 1 : 0]}
-                        alt=""
-                        fill
-                        sizes="(max-width: 1024px) 50vw, 300px"
-                        className="blend object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    )}
-                  </div>
-                  <div className="flex flex-1 flex-col p-4 sm:p-5">
-                    <h3 className="font-bold text-navy sm:text-lg">{t.cat}</h3>
-                    <p className="mt-1 text-sm text-muted">{t.blurb}</p>
-                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-accent-deep">
-                      {n} products <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </span>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* why lyfe */}
       <section className="wrap section">
         <div className="mb-10 text-center">
@@ -211,102 +228,14 @@ export default function Home() {
             A Canadian manufacturer you can verify, with the paperwork to prove every batch.
           </p>
         </div>
-        <div className="grid gap-5 md:grid-cols-3">
-          {WHY.map(({ Icon, title, text }, i) => (
-            <div key={title} className="card p-7" data-reveal style={{ ["--d" as string]: `${i * 80}ms` }}>
-              <span className="grid h-12 w-12 place-items-center rounded-xl bg-accent/10 text-accent">
-                <Icon className="h-6 w-6" />
-              </span>
-              <h3 className="mt-5 text-lg font-bold text-navy">{title}</h3>
-              <p className="mt-2 text-[0.9375rem] leading-relaxed text-muted">{text}</p>
-            </div>
-          ))}
-        </div>
+        <WhyCards items={WHY} />
       </section>
 
-      {/* lab verified */}
-      <section className="bg-navy text-white">
-        <div className="wrap section grid items-center gap-10 lg:grid-cols-2">
-          <div data-reveal>
-            <p className="eyebrow text-white">Lab-verified purity</p>
-            <h2 className="head mt-4 max-w-[18ch]">Every batch tested. Every result documented.</h2>
-            <p className="mt-4 max-w-[52ch] text-white/75">
-              Nothing ships on trust alone. Each lot is analysed before it is listed, and its certificate of
-              analysis comes with your order.
-            </p>
-            <ul className="mt-7 grid gap-3">
-              {[
-                "HPLC testing for purity and concentration",
-                "Mass spectrometry to confirm identity",
-                "USP-grade, low-endotoxin, low-metal excipients",
-                "Batch-specific certificate of analysis with every order",
-              ].map((t) => (
-                <li key={t} className="flex items-start gap-3">
-                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-accent">
-                    <CheckIcon className="h-3.5 w-3.5" />
-                  </span>
-                  {t}
-                </li>
-              ))}
-            </ul>
-            <Link href="/documentation" className="btn btn-solid mt-8">
-              See how we test <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-          <div className="relative pb-6" data-reveal style={{ ["--d" as string]: "100ms" }}>
-            <div className="grid grid-cols-3 gap-3 sm:gap-4">
-              {["semax-10-mg", "nad-500-mg", "ss-31-10-mg"].map((s, i) => {
-                const p = getProduct(s);
-                return p ? (
-                  <div key={s} className={`exhibit relative aspect-[3/5] rounded-xl ${i === 1 ? "-translate-y-6" : "translate-y-4"}`}>
-                    <Image src={p.image} alt={p.name} fill sizes="(max-width: 1024px) 30vw, 200px" className="scale-[1.35] object-cover" />
-                  </div>
-                ) : null;
-              })}
-            </div>
-            <div className="card absolute bottom-0 left-1/2 flex -translate-x-1/2 items-center gap-3 whitespace-nowrap px-4 py-3 text-ink shadow-xl">
-              <ShieldIcon className="h-6 w-6 text-green" />
-              <span className="text-sm font-bold text-navy">99%+ purity, third-party verified</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <LabSection />
 
-      {/* 28 day supply */}
-      <section className="wrap section">
-        <div className="grid items-center gap-10 overflow-hidden rounded-2xl bg-surface lg:grid-cols-2">
-          <div className="p-7 sm:p-10 lg:p-14" data-reveal>
-            <p className="eyebrow">Dual chamber pen</p>
-            <h2 className="head mt-4 text-navy">Only buy what you need: 28 days</h2>
-            <p className="mt-4 max-w-[50ch] text-muted">
-              Our dual chamber pens are sized for a 28-day research cycle. Powder and bacteriostatic water stay
-              separate until you activate the pen, so nothing is mixed before it is needed.
-            </p>
-            <ul className="mt-6 grid gap-2.5 text-[0.9375rem]">
-              {["Pre-measured, factory-sealed chambers", "Mix with a twist when you are ready", "Available on 13 compounds"].map((t) => (
-                <li key={t} className="flex items-center gap-2.5">
-                  <CheckIcon className="h-4 w-4 text-accent" />
-                  {t}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/shop" className="btn btn-solid">
-                Shop pens <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link href="/documentation#dual-chamber" className="btn btn-line">
-                How it works
-              </Link>
-            </div>
-          </div>
-          <div className="relative h-[320px] sm:h-[420px] lg:h-full lg:min-h-[460px]">
-            <Image src={pen} alt="Lyfe dual chamber pen" fill sizes="(max-width: 1024px) 100vw, 640px" className="blend scale-[1.25] object-cover" />
-            <span className="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-navy shadow">
-              <PenIcon className="h-4 w-4 text-accent" /> A Canadian first
-            </span>
-          </div>
-        </div>
-      </section>
+      <TwentyEightDays />
+
+      <DualChamber />
 
       <Newsletter />
     </>

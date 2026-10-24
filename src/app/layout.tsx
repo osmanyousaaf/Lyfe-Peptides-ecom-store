@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Caveat, Plus_Jakarta_Sans } from "next/font/google";
+import { Caveat, Instrument_Serif, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
+import PromoBar from "@/components/PromoBar";
+import WelcomePopup from "@/components/WelcomePopup";
+import SiteChrome from "@/components/SiteChrome";
+import Tracker from "@/components/Tracker";
 import Providers from "@/components/Providers";
 import { getCategories, productsByCategory } from "@/lib/products";
 
@@ -10,6 +15,13 @@ const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
+});
+
+const serif = Instrument_Serif({
+  variable: "--font-instrument",
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
 });
 
 const caveat = Caveat({
@@ -36,15 +48,30 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const categories = getCategories().map((name) => ({ name, count: productsByCategory(name).length }));
   return (
-    <html lang="en" className={`${jakarta.variable} ${caveat.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${jakarta.variable} ${caveat.variable} ${serif.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
       </head>
       <body className="min-h-full">
         <Providers>
-          <Header categories={categories} />
-          <main>{children}</main>
-          <Footer />
+          <SiteChrome
+            top={
+              <>
+                <PromoBar />
+                <Header categories={categories} />
+              </>
+            }
+            bottom={
+              <>
+                <Footer />
+                <ChatWidget />
+                <WelcomePopup />
+              </>
+            }
+          >
+            {children}
+          </SiteChrome>
+          <Tracker />
         </Providers>
       </body>
     </html>

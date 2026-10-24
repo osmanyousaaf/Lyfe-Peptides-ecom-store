@@ -26,9 +26,8 @@ export const BoltIcon = ({ className }: P) => (
   </svg>
 );
 export const MapleIcon = ({ className }: P) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-    <path d="M12 2l1.4 3.4 2.6-1.3-.6 3.6 3.2-.7-1.6 2.8 3 1.2-2.6 1.6 1.7 2.4-3.3-.2.5 3.3-2.8-1.8-.9 3.7h-1.2l-.9-3.7-2.8 1.8.5-3.3-3.3.2 1.7-2.4-2.6-1.6 3-1.2-1.6-2.8 3.2.7-.6-3.6 2.6 1.3L12 2z" />
-    <rect x="11.4" y="18" width="1.2" height="4" rx="0.6" />
+  <svg className={className} viewBox="-2015 -2000 4030 4030" fill="currentColor" aria-hidden>
+    <path d="m-90 2030 45-863a95 95 0 0 0-111-98l-859 151 116-320a65 65 0 0 0-20-73l-941-762 212-99a65 65 0 0 0 34-79l-186-572 542 115a65 65 0 0 0 73-38l105-247 423 454a65 65 0 0 0 111-57l-204-1052 327 189a65 65 0 0 0 91-27l332-652 332 652a65 65 0 0 0 91 27l327-189-204 1052a65 65 0 0 0 111 57l423-454 105 247a65 65 0 0 0 73 38l542-115-186 572a65 65 0 0 0 34 79l212 99-941 762a65 65 0 0 0-20 73l116 320-859-151a95 95 0 0 0-111 98l45 863z" />
   </svg>
 );
 export const CartIcon = ({ className }: P) => (
@@ -121,5 +120,10 @@ export const ClockIcon = ({ className }: P) => (
   <svg className={className} viewBox="0 0 24 24" aria-hidden {...s}>
     <circle cx="12" cy="12" r="8.5" />
     <path d="M12 7.5V12l3 2" />
+  </svg>
+);
+export const PlusIcon = ({ className }: P) => (
+  <svg className={className} viewBox="0 0 24 24" aria-hidden {...s} strokeWidth={2.2}>
+    <path d="M12 5v14M5 12h14" />
   </svg>
 );

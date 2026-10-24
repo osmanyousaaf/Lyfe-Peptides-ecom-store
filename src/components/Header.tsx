@@ -6,29 +6,18 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { useCart } from "@/lib/cart";
 import {
-  BoltIcon,
   CartIcon,
   ChevronDown,
   CloseIcon,
-  FlaskIcon,
-  MapleIcon,
   MenuIcon,
   SearchIcon,
-  ShieldIcon,
-  TruckIcon,
 } from "./icons";
 
-const TRUST = [
-  { Icon: ShieldIcon, text: "COA on every product" },
-  { Icon: FlaskIcon, text: "99%+ purity guaranteed" },
-  { Icon: TruckIcon, text: "Free shipping on orders over $300" },
-  { Icon: BoltIcon, text: "Same-day dispatch before 1 PM EST" },
-  { Icon: MapleIcon, text: "Proudly Canadian" },
-];
 
 const NAV = [
   { href: "/about", label: "About" },
   { href: "/documentation", label: "Documentation" },
+  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -69,38 +58,12 @@ export default function Header({ categories }: { categories: { name: string; cou
   const navClass = (active: boolean) =>
     `relative py-2 text-[0.9375rem] font-semibold transition-colors ${
       active
-        ? "text-navy after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:rounded after:bg-navy"
+        ? "text-navy after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:rounded after:bg-accent"
         : "text-ink/80 hover:text-navy"
     }`;
 
   return (
     <header className="sticky top-0 z-50">
-      {/* trust bar */}
-      <div className="bg-navy text-white">
-        <div className="wrap flex h-10 items-center justify-between gap-6 overflow-hidden">
-          <ul className="mx-auto hidden items-center gap-5 text-[0.8125rem] font-medium lg:flex">
-            {TRUST.map(({ Icon, text }, i) => (
-              <li key={text} className="flex items-center gap-2 whitespace-nowrap">
-                {i > 0 && <span className="mr-4 h-3.5 w-px bg-white/25" aria-hidden />}
-                <Icon className="h-4 w-4 text-white/90" />
-                {text}
-              </li>
-            ))}
-          </ul>
-          {/* small screens: a slow ticker */}
-          <div className="relative flex-1 overflow-hidden lg:hidden" aria-label="Store highlights">
-            <div className="flex w-max animate-[ticker_28s_linear_infinite] gap-8 text-[0.8125rem] font-medium">
-              {[...TRUST, ...TRUST].map(({ Icon, text }, i) => (
-                <span key={i} className="flex items-center gap-2 whitespace-nowrap" aria-hidden={i >= TRUST.length}>
-                  <Icon className="h-4 w-4" />
-                  {text}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* main bar */}
       <div className="border-b border-line bg-white/95 backdrop-blur">
         <div className="wrap flex h-[76px] items-center gap-6 lg:gap-10">
